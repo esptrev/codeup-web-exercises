@@ -1,4 +1,4 @@
-console.log("Node is working");
+//console.log("Node is working");
 // "hello world!"
 // 'hello world'
 // 'hello isn\'t a world'
@@ -12,6 +12,7 @@ console.log("Node is working");
 // var phrase1 = "I'm really jones'n for a \n";
 // console.log(phrase1 + favoritefood);
 
+console.log('1' + 2);
 
 
 
