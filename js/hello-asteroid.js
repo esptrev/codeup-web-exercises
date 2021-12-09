@@ -41,10 +41,29 @@ let phrase1 = "I'm really jones'n for a \n";
 //console.log(myexpression);
 
 // console.log(1 / myexpression); //oof
-let num1 = 22;
-console.log(num1++);//post increment will output orignal number
-console.log(num1);//will output a new number with increment
-console.log(++num1); //pre increment, will post original plus the increment
+// let num1 = 22;
+// console.log(num1++);//post increment will output orignal number
+// console.log(num1);//will output a new number with increment
+// console.log(++num1); //pre increment, will post original plus the increment
+
+
+
+let numStr = "7.99"; //numerical string
+let discount = .10;  //number  Cannot multiply the two without parsing
+let numAmount = parseFloat(numStr);
+let discountedTotal = numAmount - (numAmount * discount);
+console.log(discountedTotal);
+
+
+let userAge = "12";
+let hopefullyaNumber = parseInt(userAge);
+if (hopefullyaNumber){
+    console.log("Your age is: " + userAge);
+}else {
+    console.log("That is not a valid age. Please try again!");
+}
+
+
 
 
 
