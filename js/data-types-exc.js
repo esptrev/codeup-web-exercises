@@ -35,18 +35,24 @@
 // let azHourly = 380;
 // let ggHourly = 400
 // var takeHomePay = (faceBookTimeSheet * fbHourly) + (googleTimeSheet * ggHourly) + (amazonTimeSheet * azHourly);
-// console.log(takeHomePay);
+// console.log("Your gross income for the week is " + takeHomePay);
 
-//class full = false
-//class time slot = false
-//class students < class full
-//max class students 100
-//schedule must be open
+// class full = false
+// class time slot = false
+// class students < class full
+// max class students 100
+// schedule must be open
 // let maxClass = 100;
 // let classEnrollment = 10;
 // let scheduleOpen = true;
-// var allowedToRegister = (classEnrollment < maxClass) && scheduleOpen;
-// console.log(allowedToRegister);
+// if ((classEnrollment < maxClass) && scheduleOpen) {
+//     console.log("Congratulations you've are now registered!");
+// } else {
+//     console.log("We're sorry but we could not regiester you for this class")
+// }
+
+//console.log(allowedToRegister);  go back and add another else if for class is open but schedule is full
+
 
 //must buy 2 or more
 //discount date has to be valid
@@ -58,11 +64,18 @@
 // var qP = (x >= 2);
 // var x = 5;
 
-// let membershipLevel = true;
-// let quantityPurchased = false;
-// let offerValid = false;
-// var applyOffer = (membershipLevel || quantityPurchased) && offerValid;
-// console.log(applyOffer);
+let membershipLevel = false;
+let quantityPurchased = false;
+let offerValid = false;
+
+var applyOffer = ((membershipLevel || quantityPurchased) && offerValid)
+console.log(applyOffer);
+
+if ((membershipLevel || quantityPurchased) && offerValid){
+    console.log("Offer has been applied to cart!");
+}else{
+    console.log("We're sorry but that offer is no longer valid");
+}
 
 
 // Create a variable that holds a boolean value for each of the following conditions:
@@ -72,20 +85,20 @@
 // the username must be no more than 20 characters
 // neither the username or password can start or end with whitespace
 
-var username = 'codeup';
-var password = 'notastrongpassword';
-var password = password.trim(); //trims whsp but doesn't prevent it,  sbould be if/else to end code
-var username = username.trim();
+// var username = 'codeup';
+// var password = 'notastrongpassword';
+// var password = password.trim(); //trims whsp but doesn't prevent it,  sbould be if/else to end code
+// var username = username.trim();
 // console.log(password);
 // console.log(username);
-var passLength = password.length;
-var noUserInPass = (password.indexOf(username) === -1); //keeps full username out of password, need multiple indexof to elimnate portions there of
+// var passLength = password.length;
+// var noUserInPass = (password.indexOf(username) === -1); //keeps full username out of password, need multiple indexof to elimnate portions there of
 // console.log(noUserInPass);
 // console.log(passLength);
-var userLength = username.length;
+// var userLength = username.length;
 // console.log(userLength);
-var validPassword = (passLength >= 5 && userLength <= 20 && noUserInPass  );
-console.log(validPassword);
+// var validPassword = (passLength >= 5 && userLength <= 20 && noUserInPass  );
+// console.log(validPassword);
 
 
 
