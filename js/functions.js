@@ -8,10 +8,11 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name){
-    console.log('Hello, ' + name + '!');
-
+function sayHello(name) {
+    console.log("Hello, " + name + "!");
 }
+sayHello("CodeUp")
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -19,13 +20,19 @@ function sayHello(name){
  *
  * console.log 'helloMessage' to check your work
  */
-var helloMessage = sayHello(Trevor);
+
+var helloMessage = sayHello("TrevorE");
+
+
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = "Trevor";
+sayHello(myName)
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -48,6 +55,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(num){
+    return(num === 2);
+}
+isTwo(random)
+var isItTwo = isTwo(random)
+console.log(isItTwo)
+console.log(random)
 
 /**
  * TODO:
@@ -61,12 +75,37 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+// var tip = (.2);
+// var billTotal = (20);
+
+function calculateTip (x, y){
+    return x * y;
+}
+// calculateTip(.2 , 20);
+//var tipAmount = calculateTip()
+
+console.log(calculateTip(.25 , 25.5));
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+function calculateTip (){
+var tipPercentage = prompt("What percentage tip would you like to leave?");
+alert("You entered: " + tipPercentage  + "\%");
+var billBeforeTip = prompt("What was your bill total prior to tip?");
+alert("You entered:$ " + billBeforeTip);
+var tipCalc = tipPercentage / 100;
+var actualTipAmount = (tipCalc * billBeforeTip);
+alert("Your tip amount will be: $" + actualTipAmount);
+var totalBill = parseFloat(actualTipAmount) + parseFloat(billBeforeTip);
+alert("Total Bill: $" + totalBill);
+    return actualTipAmount * billBeforeTip;
+}
+
 
 /**
  * TODO:
@@ -82,3 +121,8 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount (x , y){
+    return(x - x * y / 100);
+}
+console.log(applyDiscount(45.99 , 12));
