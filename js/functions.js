@@ -1,4 +1,9 @@
 "use strict";
+function isSpace(letter){
+    if(letter === ' ');
+    return true;
+}
+    return false;
 
 /**
  * TODO:
@@ -81,11 +86,12 @@ console.log(random)
 function calculateTip (x, y){
     return x * y;
 }
-// calculateTip(.2 , 20);
-//var tipAmount = calculateTip()
-
 console.log(calculateTip(.25 , 25.5));
 
+// calculateTip(.2 , 20);
+//var tipAmount = calculateTip()
+// calculateTip(.25 , 25.5);
+// console.log(calculateTip())
 
 /**
  * TODO:
@@ -102,7 +108,7 @@ var tipCalc = tipPercentage / 100;
 var actualTipAmount = (tipCalc * billBeforeTip);
 alert("Your tip amount will be: $" + actualTipAmount);
 var totalBill = parseFloat(actualTipAmount) + parseFloat(billBeforeTip);
-alert("Total Bill: $" + totalBill);
+alert("Total Bill: $" + totalBill.math.round(2));
     return actualTipAmount * billBeforeTip;
 }
 
