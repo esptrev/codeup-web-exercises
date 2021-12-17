@@ -1,15 +1,15 @@
 "use strict";
 
-// console.log('Hello from External JavaScript!');
-// alert("Welcome to my Website!");
-//
-// var response = prompt("Whats your favorite color?");
-// if (response === "blue"){
-//     alert("Awesome, thats my favorite color too!");
-//
-// }else{
-//     alert(response + " is a nice color.");
-// }
+console.log('Hello from External JavaScript!');
+alert("Welcome to my Website!");
+
+var response = prompt("Whats your favorite color?");
+if (response === "blue"){
+    alert("Awesome, thats my favorite color too!");
+
+}else{
+    alert(response + " is a nice color.");
+}
 
 
 
@@ -26,23 +26,23 @@ movie per day is $3, how much will you have to pay?
 // PPD = 3
 // total = (lm + bb + hc)* ppd
 
-// var littleMermaid = prompt("How many days did you have 'Little Mermaid' out on rental?");
-// alert("You entered: " + littleMermaid);
-// console.log(littleMermaid);
-//
-// var brotherBear = prompt("How many days did you have 'Brother Bear' out for rental?");
-// alert("You entered: " + brotherBear);
-// console.log(brotherBear);
-//
-// var hercules = prompt("How many days did you have 'Hercules' out for rental?");
-// alert("You entered: " + hercules);
-// console.log(hercules);
-//
-// var pricePerDay = 3;
-//
-// var totalRentalFees = (littleMermaid * pricePerDay + brotherBear * pricePerDay + hercules * pricePerDay);
-// console.log(totalRentalFees);
-// alert("Your total rental fees are $" + totalRentalFees);
+var littleMermaid = prompt("How many days did you have 'Little Mermaid' out on rental?");
+alert("You entered: " + littleMermaid);
+console.log(littleMermaid);
+
+var brotherBear = prompt("How many days did you have 'Brother Bear' out for rental?");
+alert("You entered: " + brotherBear);
+console.log(brotherBear);
+
+var hercules = prompt("How many days did you have 'Hercules' out for rental?");
+alert("You entered: " + hercules);
+console.log(hercules);
+
+var pricePerDay = 3;
+
+var totalRentalFees = (littleMermaid * pricePerDay + brotherBear * pricePerDay + hercules * pricePerDay);
+console.log(totalRentalFees);
+alert("Your total rental fees are $" + totalRentalFees);
 
 
 
@@ -59,25 +59,25 @@ week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours for Amazo
 //amazaon time is 4
 //facebook time is 10
 
-// var faceBookTimeSheet = prompt("How many hour did you work for FB this week?");
-// alert("You entered: " + faceBookTimeSheet);
-// console.log(faceBookTimeSheet);
-//
-// var amazonTimeSheet = prompt("How many hours did you work for AZ this week?");
-// alert("You entered: " + amazonTimeSheet);
-// console.log(amazonTimeSheet);
-//
-// var googleTimeSheet = prompt("How many hours did you work for Google this week?");
-// alert("You entered: " + googleTimeSheet);
-// console.log(googleTimeSheet);
-//
-// let fbHourly = 350
-// let azHourly = 380;
-// let ggHourly = 400
-//
-// var takeHomePay = (faceBookTimeSheet * fbHourly) + (googleTimeSheet * ggHourly) + (amazonTimeSheet * azHourly);
-// console.log("Your gross income for the week is $" + takeHomePay);
-// alert("Your gross income for the week is $" + takeHomePay);
+var faceBookTimeSheet = prompt("How many hour did you work for FB this week?");
+alert("You entered: " + faceBookTimeSheet);
+console.log(faceBookTimeSheet);
+
+var amazonTimeSheet = prompt("How many hours did you work for AZ this week?");
+alert("You entered: " + amazonTimeSheet);
+console.log(amazonTimeSheet);
+
+var googleTimeSheet = prompt("How many hours did you work for Google this week?");
+alert("You entered: " + googleTimeSheet);
+console.log(googleTimeSheet);
+
+let fbHourly = 350
+let azHourly = 380;
+let ggHourly = 400
+
+var takeHomePay = (faceBookTimeSheet * fbHourly) + (googleTimeSheet * ggHourly) + (amazonTimeSheet * azHourly);
+console.log("Your gross income for the week is $" + takeHomePay);
+alert("Your gross income for the week is $" + takeHomePay);
 
 
 
@@ -125,30 +125,30 @@ Premium members do not need to buy a specific amount of products.
 // var qP = (x >= 2);
 // var x = 5;
 
-// var membershipLevel = prompt("Are you still a premium member?");
-// if (membershipLevel === "yes"){
-//     alert("Thats great, we really appreciate you patronage");
-// }else{
-//     alert("Please consider upgrading your membership level!");
-// }
-// console.log(membershipLevel);
-//
-// var quantityPurchased = prompt("How many sale items did you add to your cart?")
-// if (quantityPurchased <= 2){
-//     alert("If you're not a premium member, you'll have to purchase more to qualify for special.");
-// } else{
-//      alert("You entered enough items to qualify for the discounted rate!");
-// }
-// let offerValid = true;
+var membershipLevel = prompt("Are you still a premium member?");
+if (membershipLevel === "yes"){
+    alert("Thats great, we really appreciate you patronage");
+}else{
+    alert("Please consider upgrading your membership level!");
+}
+console.log(membershipLevel);
 
- // var applyOffer = ((membershipLevel || quantityPurchased) && offerValid)
- // console.log(applyOffer);
+var quantityPurchased = prompt("How many sale items did you add to your cart?")
+if (quantityPurchased <= 2){
+    alert("If you're not a premium member, you'll have to purchase more to qualify for special.");
+} else{
+     alert("You entered enough items to qualify for the discounted rate!");
+}
+let offerValid = true;
+ //
+ var applyOffer = ((membershipLevel || quantityPurchased) && offerValid)
+ console.log(applyOffer);
 
-// if (membershipLevel === "yes" || quantityPurchased >= 2){
-//     alert("Offer has been applied to cart!");
-// } else { alert("We're sorry but this order doesn't qualify for the special.");
-//
-// }
+if (membershipLevel === "yes" || quantityPurchased >= 2){
+    alert("Offer has been applied to cart!");
+} else { alert("We're sorry but this order doesn't qualify for the special.");
+
+}
 
 
 
