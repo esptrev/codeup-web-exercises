@@ -23,28 +23,17 @@
 function analyzeColor(string) {
     if (colorString === 'blue') {
         console.log("Wow! Blue is my favorite color!");
+    } else if (colorString === 'green') {
+        console.log("I sure wish my grass was still green.");
+    } else if (colorString === 'yellow') {
+        console.log("I think yellow cars are cool!");
+    } else if (colorString === 'red') {
+        console.log("Stop signs are red.");
+    } else if (colorString === 'orange') {
+        console.log("The sun looks orange.");
     } else {
-        if (colorString === 'green') {
-            console.log("I sure wish my grass was still green.");
-        } else {
-            if (colorString === 'yellow') {
-                console.log("I think yellow cars are cool!");
-            } else {
-                if (colorString === 'red') {
-                    console.log("Stop signs are red.");
-                } else {
-                    if (colorString === 'orange') {
-                        console.log("The sun looks orange.");
-                    } else {
-                        console.log("I cant think of anything that color?!");
-
-
-                    }
-                }
-            }
-        }
+        console.log("I cant think of anything that color?!");
     }
-
 }
 
 var colorString = 'brown';
@@ -93,28 +82,17 @@ function analyzeColor() {
     colors = colors.toLowerCase;
     if (colorString === 'blue') {
         console.log("Wow! Blue is my favorite color!");
+    } else if (colorString === 'green') {
+        console.log("I sure wish my grass was still green.");
+    } else if (colorString === 'yellow') {
+        console.log("I think yellow cars are cool!");
+    } else if (colorString === 'red') {
+        console.log("Stop signs are red.");
+    } else if (colorString === 'orange') {
+        console.log("The sun looks orange.");
     } else {
-        if (colorString === 'green') {
-            console.log("I sure wish my grass was still green.");
-        } else {
-            if (colorString === 'yellow') {
-                console.log("I think yellow cars are cool!");
-            } else {
-                if (colorString === 'red') {
-                    console.log("Stop signs are red.");
-                } else {
-                    if (colorString === 'orange') {
-                        console.log("The sun looks orange.");
-                    } else {
-                        console.log("I cant think of anything that color?!");
-
-
-                    }
-                }
-            }
-        }
+        console.log("I cant think of anything that color?!");
     }
-
 }
 
 var colorString = randomColor;
@@ -275,51 +253,51 @@ switch (favoriteColor) {
         }
 
 
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * Do *NOT* display any of the above information
- * if the user enters a value that is not of the number data type.
- * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
- * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
- */
+    /**
+     * TODO:
+     * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+     * would like to enter a number. If they click 'Ok', prompt the user for a
+     * number, then use 3 separate alerts to tell the user:
+     *
+     * - whether the number is even or odd
+     * - what the number plus 100 is
+     * - if the number is negative or positive
+     *
+     * Do *NOT* display any of the above information
+     * if the user enters a value that is not of the number data type.
+     * Instead, use an alert to inform them of the incorrect input data type.
+     *
+     *
+     * Can you refactor your code to use functions?
+     * HINT: The way we prompt for a value could be improved
+     */
 
 
 
-function userEntersNumber() {
-    var userInput;
-    if (confirm("Would you like to enter a number?!") == true) {
-        alert("You pressed OK!");
-        userInput = prompt("Please enter your Number.");
+    function userEntersNumber() {
 
-    } else {
-        alert("Have a good day, Goodbye.");
-        return;
+        if (confirm("Would you like to enter a number?!") == true) {
+            alert("You pressed OK!");
+            var userInput = prompt("Please enter your Number.");
+
+        } else {
+            alert("Have a good day, Goodbye.");
+            return;
+        }
+        if (userInput > 0) {
+            alert("Your Number is Positive");
+        } else {
+            alert("Your Number is Negative.");
+        }
+        if (userInput % 2 === 0) {
+            alert("Your number is Even!");
+        } else {
+            alert("Your number is ODD!");
+        }
+        alert((parseInt(userInput) + 100));
     }
-    if(userInput > 0 ) {
-        alert("Your Number is Positive");
-    }else{
-        alert("Your Number is Negative.");
-    }
-    if(userInput % 2 === 0){
-        alert("Your number is Even!");
-    }
-    else {
-        alert("Your number is ODD!");
-    }
-    alert((parseInt(userInput) + 100));
-}
-userEntersNumber()
+
+        userEntersNumber()
 
 
 

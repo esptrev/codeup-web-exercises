@@ -1,10 +1,10 @@
 "use strict";
 function isSpace(letter){
-    if(letter === ' ');
+    if(letter === ' '){
     return true;
 }
     return false;
-
+}
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
