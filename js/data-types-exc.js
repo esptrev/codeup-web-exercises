@@ -44,14 +44,17 @@ console.log("Your gross income for the week is " + takeHomePay);
 // schedule must be open
 let maxClass = 100;
 let classEnrollment = 10;
-let scheduleOpen = true;
+let scheduleOpen = false;
 if ((classEnrollment < maxClass) && scheduleOpen) {
     console.log("Congratulations you've are now registered!");
-} else {
-    console.log("We're sorry but we could not regiester you for this class")
+} else if((classEnrollment < maxClass) && scheduleOpen) {
+    console.log("Class is open but your schedule is full!");
+}else {
+    console.log("We're sorry but we could not register you for this class")
 }
+// console.log(allowedToRegister);
 
-console.log(allowedToRegister);
+
 // go back and add another else if for class is open but schedule is full
 
 
