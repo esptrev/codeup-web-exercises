@@ -222,16 +222,34 @@ function not(input){
 }
 // - Make a function named `notNot(input)` that the negation of the negation of the
 // input.
+function notNot(input){
+    return !!input;
+}
 // - Make a function named `and(predicate1, predicate2)` that returns the logical
 // operation of AND
+function and(predicate1, predicate2){
+    return predicate1 && predicate2;
+}
 // - Make a function named `or(predicate1, predicate2)` that returns the logical
 // operation of OR
+function or(predicate1, predicate2){
+    return predicate2 || predicate1;
+}
 // - Write a function called `reverseString(string)` that reverses a string
+function reverseString(string){
+    return string.split('').reverse().join('');
+}
 // - Make a function named `absoluteValue(number)` that returns the absolute value
 // of a number.
+function absoluteValue(integer){
+    return Math.abs(integer);
+}
 // - Make a function named `rollDice(sides)` that takes in an argument containing
 // the number of sides the die should have. Generate a random number between 1 up
 // to and including the number of sides.
+function rollDice(sides){
+    return Math.floor(Math.random() * sides + 1) + 1;
+}
 //
 //
 //
