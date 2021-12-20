@@ -256,24 +256,44 @@ function rollDice(sides){
 // ## Simple Function Drills
 //
 // 1. Make a function called returnTwo() that returns the number 2 when called
-//
+function returnTwo(){
+    return '2';
+}
+
+console.log(returnTwo());
 // Test this function with `console.log(returnTwo())`
 //
 //     1. Make a function called sayHowdy() which console.logs the string “Howdy!”
-//
+function sayHowdy(){
+    console.log("Howdy!");
+}
+sayHowdy();
 //    Test this function by directly calling `sayHowdy()`
 //
 // Remember this function does not need a defined return value
 //
 // 1. Make a function called returnName() that returns the string of your name
-//
-// Test this function with `console.log(returnName())`
+function returnName() {
+    return 'Trevor';
+}
+// Test this function with `console.log(returnName())
+console.log(returnName());
 //
 //     1. Make a function called addThree() which takes in a number input and returns the number plus 3.
+function addThree(numb1){
+    return ( numb1+ 3);
+}
+var numb1 = 5
+console.log(addThree(numb1));
 //
 // Test this function with `console.log(addThree(5))`
 //
 //     1. Make a function called sayString() which returns the string input passed in.
+function sayString(){
+    return;
+}
+
+console.log('codeup');
 //
 // Test this function with `console.log(sayString('codeup'))`
 //
@@ -282,29 +302,70 @@ function rollDice(sides){
 //
 // - Write a function called `identity(input)` that takes in an argument called
 // input and returns that input.
+function identity(input){
+    return input;
+}
+
+console.log(identity('gobble gobble'));
 //
 // - Write a function called `getRandomNumber(min, max)` that returns a random
 // number between min and max values sent to that function call.
+function getRandomNumber(min,max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomNumber(1,10));
+
 //
 // - Write a function called `first(input)` that returns the first character in the
 // provided string.
-//
+function firstChar(input){
+    console.log(input.charAt(0));
+}
+firstChar("trevor");
 // - Write a function called `last(input)` that returns the last character of a
 // string
+function lastCharacter(input){
+    return(input.charAt(input.length - 1));
+}
+console.log(lastCharacter('trevor'));
 //
 // - Write a function called `rest(input)` that returns everything but the first
 // character of a string.
+function everythingButTheFirst(string){
+    return(string.slice(1, string.length));
+}
+
+console.log(everythingButTheFirst('trevor'));
 //
 // - Write a function called `reverse(input)` that takes a string and returns it
 // reversed.
+function reversedString(stringtoenter){
+    return(reverseString(stringtoenter));
+}
+console.log(reversedString('trevor'));
 //
 // - Write a function called `isNumeric(input)` that takes an input and returns a
 // boolean if the input is numeric.
+function isNumeric(num){
+    return(!isNaN(num));
+}
+console.log(isNumeric('true'));
+
 //
 // - Write a function called `count(input)` that takes in a string and returns the
 // number of characters.
+function countString(input){
+    return input.length;
+}
+console.log(countString('The Witcher is crazy good!'))
 //
 // - Write a function called `add(a, b)` that returns the sum of a and b
+function addition(num1,num2){
+    return num2 + num1;
+}
+
+console.log(addition(5,5));
 //
 // - Write a function called `subtract(a, b)` that return the difference between
 // the two inputs.
@@ -325,6 +386,11 @@ function rollDice(sides){
 // - Write a function called `doMath(operator, a, b)` that takes 3 parameters. The
 // first parameter is the name of the math function you want to apply. a and b
 // are the two numbers to run that function on.
+function doMath(operator, numb1, numb2){
+    return(operator(numb1,numb2));
+}
+console.log(doMath(multiply(5,5)));
+
 //
 // ## Even More Function Bonuses
 //
