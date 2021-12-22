@@ -365,7 +365,7 @@ function addition(num1,num2){
     return num2 + num1;
 }
 
-console.log(addition(5,5));
+console.log(addition(10,5));
 //
 // - Write a function called `subtract(a, b)` that return the difference between
 // the two inputs.
@@ -386,16 +386,23 @@ console.log(addition(5,5));
 // - Write a function called `doMath(operator, a, b)` that takes 3 parameters. The
 // first parameter is the name of the math function you want to apply. a and b
 // are the two numbers to run that function on.
-function doMath(operator, numb1, numb2){
-    return(operator(numb1,numb2));
+function doMath(operator, num1, num2){
+    var multi = multiply(9,9);
+    var add = addition(9,9);
+    var sub = subtract(910,9);
+    return(sub);
 }
-console.log(doMath(multiply(5,5)));
+console.log(doMath());
 
 //
 // ## Even More Function Bonuses
 //
 // 1. Create a function that will return how many whitespace characters are at the
 // beginning and end of a string.
+function countWhitspace(stringInput) {
+    return(stringInput.length - stringInput.trim().length);
+}
+console.log(countWhitspace("   My name is Trevor   "));
 //
 // 1. Create a function that takes in two string inputs.
 //
@@ -406,18 +413,46 @@ console.log(doMath(multiply(5,5)));
 // string.
 // - If the second string input is not present in the first, return the first
 // string as entered in the function.
-//
+function noStringsAttached(string, substring){
+    var string = "Weather has been great!";
+    var substring = "great";
+    if(string.includes(substring)){
+        return(string.replace(substring, ""));
+    }else{
+        return string;
+    }
+}
+console.log(noStringsAttached())
+
 // 1. Create a function that takes in a string and returns true if the last letter
 // is an "a" (otherwise, return false).
+function whereIsTheA(string){
+    return((string.charAt(string.length - 1) === "a"))
+        return true;
+}
+console.log(whereIsTheA("pizza"));
 //
 // 1. EXTRA CHALLENGE: create a function that will return how many whitespace
 // characters are at the beginning of a string (hint: use regex).
-//
+function returnWhiteSpace(input){
+    console.log(input.match(/^(\s*)/)[1].length);
+}
+returnWhiteSpace("   how you doing?");
+
 // 1. Create a function `returnTrueMessage()` that returns the string "Hey, it's true!"
 //
 // - Create a function `returnFalseMessage()` that returns the string "Hey, it's false!"
 // - Create a function `returnMessage()` that takes in a function and returns the call to the function
 // - Experiement passing in different functions.
+
+function returnMessage() {
+    calledFunction();
+    console.log("Calling the called function");
+}
+function calledFunction() {
+    console.log("This doesn't make any sense to me");
+}
+returnMessage();
 //
 // 1. Create a function, `willLoginUser()` that takes in a username string,
 //     password string, user age, a boolean indicating if they are an admin.
@@ -426,3 +461,40 @@ console.log(doMath(multiply(5,5)));
 // password and the user is at least 18 years old. If the user is an admin,
 //     they do not have to be a certain age but the password must still not match
 // the username.
+
+var userName = "holeymoley";
+var userPassWord = "crickets";
+var userAge = parseInt("19");
+var adMin = 'yes';
+
+function willLoginUser(){
+    return (oldEnough === true || areYouAnAdmin === true || validPassword === true);
+    }
+console.log(willLoginUser())
+
+function validPassword(){
+    if(userName.includes(userPassWord)){
+        return false;
+    }else {
+        return true;
+    }
+}
+console.log(validPassword());
+
+function oldEnough(){
+    if (userAge >= 18){
+        return true;
+    }else {
+        return false;
+    }
+}
+console.log(oldEnough());
+
+function areYouAnAdmin(){
+    if (adMin === 'yes'){
+        return true;
+    }else {
+        return false;
+    }
+}
+console.log(areYouAnAdmin());
