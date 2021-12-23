@@ -19,15 +19,44 @@ for (var i = 1; i < 11; i++) {
     }
 }
 
-for (var i = 1; i < 10; i++){
-        let r = (i + " ").repeat(i)
-        console.log(r)
-}
+// for (var i = 1; i < 10; i++){
+//         let r = (i + " ").repeat(i)
+//         console.log(r)
+// }
 
-for (var i = 100; i > 0; i -= 5){
-        console.log(i);
-}
+// for (var i = 1; i < 100; i += 1){
+//     if ( i <= 3){
+//     }
+//     if (i % 2 === 0){
+//         continue;
+//     }
+//     if (i % 3 === 0){
+//         continue;
+//     }
+//     if(i % 5 === 0){
+//         continue;
+//     }
+//         console.log(i);
+// }
 
+// function number(){}
+//     for (var i = 2; i <= 100; i++) {
+//         if (num % i === 0) {
+//             console.log(i);
+//         }
+//     }
+
+function isPrime(num) {
+    if(num < 2) return false;
+    for (var i = 2; i < num; i++) {
+        if(num%i==0)
+            return false;
+    }
+    return true;
+}
+for(var i = 0; i < 200; i++){
+    if(isPrime(i)) console.count(console.log(i) <= 50);
+}
 
 
 
