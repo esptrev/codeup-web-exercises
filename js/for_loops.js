@@ -49,14 +49,23 @@ for (var i = 1; i < 11; i++) {
 function isPrime(num) {
     if(num < 2) return false;
     for (var i = 2; i < num; i++) {
-        if(num%i==0)
+        if(num % i == 0)
             return false;
     }
     return true;
 }
-for(var i = 0; i < 200; i++){
-    if(isPrime(i)) console.count(console.log(i) <= 50);
+var primeArray = []
+    // for(var i = 0; i < 230; i++){
+    // if(isPrime(i)) console.count(console.log(i));
+// }
+for(var i = 0; i < 230; i++) {
+    if (isPrime(i)) primeArray.push(i);
 }
+if(primeArray.length >=50){
+
+}
+
+console.log(primeArray.length);
 
 
 
