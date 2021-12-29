@@ -1,3 +1,5 @@
+function addIntegers(a,b){
+    return a + b;
 
-
-console.log(rollDice(12));
+}
+console.log(addIntegers(-8, 3));

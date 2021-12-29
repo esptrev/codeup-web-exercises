@@ -54,18 +54,31 @@ function isPrime(num) {
     }
     return true;
 }
-var primeArray = []
-    // for(var i = 0; i < 230; i++){
-    // if(isPrime(i)) console.count(console.log(i));
-// }
-for(var i = 0; i < 230; i++) {
-    if (isPrime(i)) primeArray.push(i);
+let primeArray = []
+let primeCount = 0;
+while (primeArray.length < 50){
+    if(isPrime(primeCount) === true){
+        console.log(primeCount);
+        primeArray.push(isPrime())
+    }
+    primeCount++
 }
-if(primeArray.length >=50){
-
-}
-
 console.log(primeArray.length);
+
+
+
+// var primeArray = []
+//     for(var i = 0; i < 230; i++){
+//     if(isPrime(i)) console.count(console.log(i));
+// }
+// for(var i = 0; i < 230; i++) {
+//     if (isPrime(i)) primeArray.push(i);
+// }
+// if(primeArray.length >=50){
+//
+// }
+//
+// console.log(primeArray.length);
 
 
 
