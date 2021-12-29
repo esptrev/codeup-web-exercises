@@ -19,12 +19,22 @@
 
 function anaylyzeInput(characters) {
     let input = prompt("Please enter some characters.");
-     if (input = number)
-    if(characters % 2 === 0){
-        alert("You entered an even number.")
+    switch (input){
+        case typeof input == "number";
+        if(input % 2 === 0){
+            return("You entered an even number.")
+        }else{
+            return ("You entered an odd number.");
+        }
+        if(input > 0){
+            return ("You entered a positive number")
+        }else {
+            return ("You entered a negative number.")
+        }
+        break;
+        case typeof input == "text";
+        if(input.length > 1)git
     }
-    else{
-        alert("You entered an odd number.")
 
-    }
-    }
+}
+
