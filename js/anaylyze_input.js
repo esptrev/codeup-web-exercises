@@ -17,24 +17,17 @@
 // Add, commit, and push to GitHub.
 //
 
-function anaylyzeInput(characters) {
-    let input = prompt("Please enter some characters.");
-    switch (input){
-        case typeof input == "number";
-        if(input % 2 === 0){
-            return("You entered an even number.")
+let promptedInput = prompt("Please enter at least one character into the box");
+
+function isInputANumber (){
+    if(parseInt(promptedInput) === NaN){
+        if(promptedInput.length > 1){
+            alert("You entered " + promptedInput.length + "characters.");
+        }else if(vowels.includes(promptedInput)){
+            const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
+            alert("You entered a vowel")
         }else{
-            return ("You entered an odd number.");
+            alert("You entered a consonant.");
         }
-        if(input > 0){
-            return ("You entered a positive number")
-        }else {
-            return ("You entered a negative number.")
-        }
-        break;
-        case typeof input == "text";
-        if(input.length > 1)git
     }
-
 }
-
