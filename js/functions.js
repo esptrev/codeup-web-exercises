@@ -132,3 +132,22 @@ function applyDiscount (x , y){
     return(x - x * y / 100);
 }
 console.log(applyDiscount(45.99 , 12));
+
+function roll(die){
+    let [numOfRolls, sidesToDie] = die.split('d');
+    let numRolled = [];
+    let rollTotal = 0;
+    for (let i = 0; i < numOfRolls; i++) {
+        let rollResult = Math.floor(Math.random() * sidesToDie) + 1;
+        numRolled.push(rollResult);
+        rollTotal += rollResult
+    }
+    return `{Rolls: [${numRolled}]Total: ${rollTotal}}`;
+
+
+}
+console.log(roll('3d4'));
+console.log(roll('3d20'));
+console.log(roll('3d6'));
+
+
