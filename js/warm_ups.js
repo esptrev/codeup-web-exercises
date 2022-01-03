@@ -27,19 +27,92 @@
 // }
 // console.log(isFive(5));
 
-function isFive (num){
+// function isFive (num){
+//
+//     if (num === 5){
+//         return true;
+// } else if(num === "5") {
+//         parseInt(num);
+//         return true;
+//     } else {
+//     return false}
+// }
+// console.log(isFive(6));
+//
+// function isMultipleOfThree(number) {
+//     console.log(number % 3 === 0);
+// }
+// isMultipleOfThree(12);
 
-    if (num === 5){
-        return true;
-} else if(num === "5") {
-        parseInt(num);
-        return true;
-    } else {
-    return false}
-}
-console.log(isFive(6));
+// Write a function called add(num1, num2) which returns the sum of a and b
+// Write a function named square(numToSqr) which takes in a number (numToSqr) and returns the number multiplied by itself
+// Write a function called sumOfSquares(a, b).
+//     You should find the square of a, then the square of b.
+//     Invoke add(num1, num2) and pass the new squared values in as arguments.
 
-function isMultipleOfThree(number) {
-    console.log(number % 3 === 0);
+
+function add(num1,num2){
+    return(num1 + num2);
 }
-isMultipleOfThree(12);
+console.log(add(5,5));
+console.log(add(-8, 5));
+console.log(add(-5, -3));
+
+function square(numToSqr){
+    return(numToSqr ** 2);  /* could also use Math.pow(x,y) to exponents */
+}
+console.log(square(5));
+
+function sumOfSquares(int1,int2){
+    var squaredInt1 = square(int1);  /*These extra lines may make code more readable */
+    var squaredInt2 = square(int2);
+    return add(squaredInt1, squaredInt2);
+    // return(add(square(int1), square(int2)));  /* my original code */
+}
+console.log(sumOfSquares(2,2));
+
+function sqRoot(num){
+    return(Math.sqrt(num) ** 2);
+}
+console.log(Math.round(sqRoot(20)));
+
+/*  Write a function named getFizzBuzz(startingNum) which performs the following actions:
+    If startingNum is divisible by 3
+    console log "fizz"
+    Else, if startingNum is divisible by 5
+    console log "buzz"
+    If startingNum is divisible by 3 AND divisible by 5
+    return a string which says "FIZZ BUZZ"
+    Thinking about getFizzBuzz(startingNum), let's console log the return value of this function
+    What if getFizzBuzz doesn't return a value (VOID)?
+    How do you want to handle that?
+*/
+// function getFizzBuzz(startingnum){
+//         if (startingnum % 3 === 0 && startingnum % 5 === 0) {
+//             console.log("Fizz Buzz");
+//         } else if (startingnum % 3 === 0) {
+//             console.log("Fizz");
+//         } else if (startingnum % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log("yippe kay a");
+//         }
+//     }
+// getFizzBuzz(88)    //My Code from exercise
+
+function getFizzBuzz(startingnum){  //Casey Code from Exercise
+    if(startingnum % 3 === 0 && startingnum % 5 === 0){
+        return("Fizz Buzz");
+    }else if(startingnum % 3 === 0){
+        console.log("fizz");
+    }else if(startingnum % 5 === 0){
+        console.log("buzz");
+}
+}
+function tryGetFizzBuzz(input){
+    let maybeFizzBuzz = getFizzBuzz(input)
+    if(!! maybeFizzBuzz){
+        console.log(maybeFizzBuzz)
+    }
+}
+console.log(getFizzBuzz(9));
