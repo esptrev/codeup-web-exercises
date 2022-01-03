@@ -110,9 +110,14 @@ function getFizzBuzz(startingnum){  //Casey Code from Exercise
 }
 }
 function tryGetFizzBuzz(input){
-    let maybeFizzBuzz = getFizzBuzz(input)
-    if(!! maybeFizzBuzz){
+    let maybeFizzBuzz = getFizzBuzz(input);
+    if(!!maybeFizzBuzz){
         console.log(maybeFizzBuzz)
     }
 }
-console.log(getFizzBuzz(9));
+function runThatProgramThingy (){
+    tryGetFizzBuzz(9);
+    tryGetFizzBuzz(10);
+    tryGetFizzBuzz(15);
+}
+runThatProgramThingy()
