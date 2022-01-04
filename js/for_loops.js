@@ -1,8 +1,11 @@
+//Show multiplication table
+
 for (var i = 0; i <= 10; i++) {
     var multiplier = 7
     console.log('multiple of ' + i * (multiplier));
 }
 
+//Ten random numbers from 10-200
 
 for (var i = 1; i < 11; i++) {
     console.log('Lucky number: ' + i + " is!?");
@@ -19,10 +22,12 @@ for (var i = 1; i < 11; i++) {
     }
 }
 
-// for (var i = 1; i < 10; i++){
-//         let r = (i + " ").repeat(i)
-//         console.log(r)
-// }
+for (var i = 1; i < 10; i++){
+        let r = (i + " ").repeat(i)
+        console.log(r)
+}
+//
+
 
 // for (var i = 1; i < 100; i += 1){
 //     if ( i <= 3){
@@ -39,12 +44,12 @@ for (var i = 1; i < 11; i++) {
 //         console.log(i);
 // }
 
-// function number(){}
-//     for (var i = 2; i <= 100; i++) {
-//         if (num % i === 0) {
-//             console.log(i);
-//         }
-//     }
+function number(){}
+    for (var i = 2; i <= 100; i++) {
+        if (number % i === 0) {
+            console.log(i);
+        }
+    }
 
 function isPrime(num) {
     if(num < 2) return false;
@@ -65,7 +70,7 @@ while (primeArray.length < 50){
 }
 console.log(primeArray.length);
 
-
+// First crack at the prime function below, pushed all numbers to array
 
 // var primeArray = []
 //     for(var i = 0; i < 230; i++){

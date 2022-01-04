@@ -121,3 +121,58 @@ function runThatProgramThingy (){
     tryGetFizzBuzz(15);
 }
 runThatProgramThingy()
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> only logs *if the iteration number is odd*
+function itsOdd(runTimes){
+    for(let i = 0; i <= runTimes; i++){
+        if(i % 2 === 0){
+            continue;
+        }
+        console.log("Here is an odd number: " + i + " .");
+    }
+}
+itsOdd(10);
+
+// TODO: MINI EXERCISE
+//      Write a function which uses a for-loop and
+//      -> accepts the number of times to iterate as a parameter
+//      -> logs "This is an even iteration" on the evens
+//      -> logs "This is an odd iteration" on the odds
+function forLoopEvenOrOdd(r){
+    for( let i = 0; i <= r; i++){
+        if(i % 2 === 0){
+            console.log(i + " This is an even iteration.");
+        }else {
+            console.log(i + " This is an odd iteration");
+        }
+    }
+}
+forLoopEvenOrOdd(10)
+
+
+// TODO: MINI EXERCISE
+//      Make a new version of your getPassword function using a for-loop!
+//      -> The purpose of the for-loop is to only allow a maximum number of attempts
+//          -> If the max attempt used unsuccessfully, alert the user of such and RETURN or BREAK
+//      -> Once the user enters the correct password, use the 'break' keyword to end the loop
+//      -> After the loop concludes, alert the use they have entered the correct password
+
+function enterTheCorrectPassword(){
+    var correctPassWord = "codeup";
+    for(let i = 1; i <= 3; ++i){
+        var userEnteredPassword = prompt("Please enter your password in box below")
+        if(userEnteredPassword === correctPassWord){
+            alert("You will be logged in momentarily.");
+            break;
+        }else if(userEnteredPassword !== correctPassWord && i < 3){
+            alert("Wrong password, please try again");
+        }else {
+            alert("You've entered wrong password too many times, login will be locked");
+        }
+    }
+}
+enterTheCorrectPassword();
+
