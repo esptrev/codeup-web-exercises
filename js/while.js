@@ -1,15 +1,26 @@
 
-//While loop
-
-let i = 2
-do {
-    console.log(i);
-     i = (i * 2);
-}while (i < 65600);
+//While loop my iteration
+function whileLoop(){
+    let i = 2
+    do {
+        console.log(i);
+        i = (i * 2);
+    }while (i < 65600);
+}
+whileLoop()
+console.log('End of my iteration')
+//Doc Rob Iteration of While Loops to exponent
+function docRobToThe3(){
+    var power = 1;
+    while(power <=16){
+        console.log(Math.pow(2,power));
+        power++
+    }
+}
+docRobToThe3()
+console.log("End of Doc Rob Loop");
 
 // Do While loop
-
-
 console.log('Start of Do While Loop')
 
 var conesSold = Math.floor(Math.random() * (100-50) + 50);// generates the total number of cones that need to be sold
