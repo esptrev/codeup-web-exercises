@@ -25,9 +25,37 @@
      */
      let newPlanetString = planetsArray.join('<br>');
     console.log(newPlanetString);
+    //Following from David Collins,  couldn't wrap head around this
+    console.log("<ul>");
+    planetsArray.forEach(function (planet){
+        console.log("<li>" + planet + "</li>");
+    })
+    console.log("</ul>");
+    console.log("end of unordered list array");
 
 
-
-
+//    From Patrick  Quilty
+    planetsArray.unshift('</li></ul>');
+    planetsArray.push('</li></ul>');
+    let slicedPlanets = planetsArray.slice(1,9);
+    console.log(slicedPlanets);
+    let joinedPlanets = planetsArray[0] + slicedPlanets.join("</li><li>") + planetsArray[9];
+    console.log(joinedPlanets);
 
 })();
+
+
+//More array practice.....
+
+planetaryArray =['mercury', 'jupiter', 'venus', 'pluto', 'earth', 'mars', 'uranus', 'saturn', 'neptune' ];
+planetaryArray.sort();
+console.log(planetaryArray);
+planetaryArray.forEach(function (planet,index){
+    console.log(planet, index)
+})
+planetaryArray.sort().reverse();
+console.log(planetaryArray);
+planetaryArray.forEach(function (planet,index){
+    console.log(planet, index)
+})
+console.log('little practice for each');

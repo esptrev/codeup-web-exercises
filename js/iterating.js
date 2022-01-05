@@ -37,6 +37,7 @@
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+    console.log('for each array');
     names.forEach(name => console.log(name));
     /**
      * TODO:
@@ -53,16 +54,19 @@
      */
     let veggieArray = ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'];
     console.log(veggieArray);
+
     function indexFirst(){
         console.log(veggieArray[0]);
     }
     indexFirst()
+
     function indexSecond(){
         console.log(veggieArray[1]);
     }
     indexSecond()
-    function indexThird(){
-        console.log(veggieArray[2]);
+
+    function indexLast(){
+        console.log(veggieArray[veggieArray.length -1]);
     }
-    indexThird()
+    indexLast()
     console.log('End of first Array exercise group');
