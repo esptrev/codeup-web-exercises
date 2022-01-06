@@ -2,7 +2,8 @@
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    var planetsArray = planetsArray = planetsString.split('|')
+    console.log(planetsArray);
 
     /**
      * TODO:
@@ -10,8 +11,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-     planetsArray = planetsString.split('|')
-     console.log(planetsArray);
+
 
     /**
      * TODO:
@@ -23,6 +23,7 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
+     //Joining planets with br tag
      let newPlanetString = planetsArray.join('<br>');
     console.log(newPlanetString);
 
@@ -45,9 +46,9 @@
     
 
     // My ul attempt
-    for(let i = 0; i < planetsArray.length; i ++){
-        console.log("<li>" + planet + "</li>");
-    }
+    // for(let i = 0; i < planetsArray.length; i ++){
+    //     console.log("<li>" + planet + "</li>");
+    // }
 
 
 })();

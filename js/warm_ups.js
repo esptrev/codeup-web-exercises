@@ -51,30 +51,30 @@
 //     Invoke add(num1, num2) and pass the new squared values in as arguments.
 
 
-function add(num1,num2){
-    return(num1 + num2);
-}
-console.log(add(5,5));
-console.log(add(-8, 5));
-console.log(add(-5, -3));
-
-function square(numToSqr){
-    return(numToSqr ** 2);  /* could also use Math.pow(x,y) to exponents */
-}
-console.log(square(5));
-
-function sumOfSquares(int1,int2){
-    var squaredInt1 = square(int1);  /*These extra lines may make code more readable */
-    var squaredInt2 = square(int2);
-    return add(squaredInt1, squaredInt2);
+// function add(num1,num2){
+//     return(num1 + num2);
+// }
+// console.log(add(5,5));
+// console.log(add(-8, 5));
+// console.log(add(-5, -3));
+//
+// function square(numToSqr){
+//     return(numToSqr ** 2);  /* could also use Math.pow(x,y) to exponents */
+// }
+// console.log(square(5));
+//
+// function sumOfSquares(int1,int2){
+//     var squaredInt1 = square(int1);  /*These extra lines may make code more readable */
+//     var squaredInt2 = square(int2);
+//     return add(squaredInt1, squaredInt2);
     // return(add(square(int1), square(int2)));  /* my original code */
-}
-console.log(sumOfSquares(2,2));
-
-function sqRoot(num){
-    return(Math.sqrt(num) ** 2);
-}
-console.log(Math.round(sqRoot(20)));
+// }
+// console.log(sumOfSquares(2,2));
+//
+// function sqRoot(num){
+//     return(Math.sqrt(num) ** 2);
+// }
+// console.log(Math.round(sqRoot(20)));
 
 /*  Write a function named getFizzBuzz(startingNum) which performs the following actions:
     If startingNum is divisible by 3
@@ -100,57 +100,57 @@ console.log(Math.round(sqRoot(20)));
 //     }
 // getFizzBuzz(88)    //My Code from exercise
 
-function getFizzBuzz(startingnum){  //Casey Code from Exercise
-    if(startingnum % 3 === 0 && startingnum % 5 === 0){
-        return("Fizz Buzz");
-    }else if(startingnum % 3 === 0){
-        console.log("fizz");
-    }else if(startingnum % 5 === 0){
-        console.log("buzz");
-}
-}
-function tryGetFizzBuzz(input){
-    let maybeFizzBuzz = getFizzBuzz(input);
-    if(!!maybeFizzBuzz){
-        console.log(maybeFizzBuzz)
-    }
-}
-function runThatProgramThingy (){
-    tryGetFizzBuzz(9);
-    tryGetFizzBuzz(10);
-    tryGetFizzBuzz(15);
-}
-runThatProgramThingy()
+// function getFizzBuzz(startingnum){  //Casey Code from Exercise
+//     if(startingnum % 3 === 0 && startingnum % 5 === 0){
+//         return("Fizz Buzz");
+//     }else if(startingnum % 3 === 0){
+//         console.log("fizz");
+//     }else if(startingnum % 5 === 0){
+//         console.log("buzz");
+// }
+// }
+// function tryGetFizzBuzz(input){
+//     let maybeFizzBuzz = getFizzBuzz(input);
+//     if(!!maybeFizzBuzz){
+//         console.log(maybeFizzBuzz)
+//     }
+// }
+// function runThatProgramThingy (){
+//     tryGetFizzBuzz(9);
+//     tryGetFizzBuzz(10);
+//     tryGetFizzBuzz(15);
+// }
+// runThatProgramThingy()
 
 // TODO: MINI EXERCISE
 //      Write a function which uses a for-loop and
 //      -> accepts the number of times to iterate as a parameter
 //      -> only logs *if the iteration number is odd*
-function itsOdd(runTimes){
-    for(let i = 0; i <= runTimes; i++){
-        if(i % 2 === 0){
-            continue;
-        }
-        console.log("Here is an odd number: " + i + " .");
-    }
-}
-itsOdd(10);
+// function itsOdd(runTimes){
+//     for(let i = 0; i <= runTimes; i++){
+//         if(i % 2 === 0){
+//             continue;
+//         }
+//         console.log("Here is an odd number: " + i + " .");
+//     }
+// }
+// itsOdd(10);
 
 // TODO: MINI EXERCISE
 //      Write a function which uses a for-loop and
 //      -> accepts the number of times to iterate as a parameter
 //      -> logs "This is an even iteration" on the evens
 //      -> logs "This is an odd iteration" on the odds
-function forLoopEvenOrOdd(r){
-    for( let i = 0; i <= r; i++){
-        if(i % 2 === 0){
-            console.log(i + " This is an even iteration.");
-        }else {
-            console.log(i + " This is an odd iteration");
-        }
-    }
-}
-forLoopEvenOrOdd(10)
+// function forLoopEvenOrOdd(r){
+//     for( let i = 0; i <= r; i++){
+//         if(i % 2 === 0){
+//             console.log(i + " This is an even iteration.");
+//         }else {
+//             console.log(i + " This is an odd iteration");
+//         }
+//     }
+// }
+// forLoopEvenOrOdd(10)
 
 
 // TODO: MINI EXERCISE
@@ -160,21 +160,192 @@ forLoopEvenOrOdd(10)
 //      -> Once the user enters the correct password, use the 'break' keyword to end the loop
 //      -> After the loop concludes, alert the use they have entered the correct password
 
-function enterTheCorrectPassword(){
-    var correctPassWord = "codeup";
-    for(let i = 1; i <= 3; ++i){
-        var userEnteredPassword = prompt("Please enter your password in box below")
-        if(userEnteredPassword === correctPassWord){
-            alert("You will be logged in momentarily.");
-            break;
-        }else if(userEnteredPassword !== correctPassWord && i < 3){
-            alert("Wrong password, please try again");
-        }else {
-            alert("You've entered wrong password too many times, login will be locked");
+// function enterTheCorrectPassword(){
+//     var correctPassWord = "codeup";
+//     for(let i = 1; i <= 3; ++i){
+//         var userEnteredPassword = prompt("Please enter your password in box below")
+        // if(userEnteredPassword === correctPassWord){
+        //     alert("You will be logged in momentarily.");
+        //     break;
+        // }else if(userEnteredPassword !== correctPassWord && i < 3){
+        //     alert("Wrong password, please try again");
+        // }else {
+        //     alert("You've entered wrong password too many times, login will be locked");
+        // }
+    // }
+// }
+
+
+
+//Warm up exercises for Objects
+// Declare an array of two objects for movies
+//     that have the following member values:
+//     title (string)
+// year released (int)
+// rating (string)
+// director (string)
+// imdb rating (decimal)
+// academy award win (boolean)
+// Use imdb.com to look up the info or make up your own info
+// write a printMovie function that takes a movie as a parameter and prints its info.
+//     call it with each of your array elements.
+//     write a printMovies function that takes an array as a parameter, iterates over the array, and calls printMovie on each of the array elements (edited)
+var movies = [];
+    movies[0] = {};
+        movies[0].title= 'The Hateful Eight'
+        movies[0].yearOfRelease= '2015'
+        movies[0].rating= 'R'
+        movies[0].director= [
+    {
+        firstName:'Quentin',
+        lastName: 'Tarantino',
+    },
+    ]
+        movies[0].imdbRating=7.8
+        movies[0].wonAcademyAward= 'yes'
+        movies[0].mypersonalrating = 0
+        movies[0].bestRatingPossible = 4
+        movies[0].genres= [
+        {
+            mainGenre: 'Crime',
+            subGenre1:'Drama',
+            subGenre2: 'Mystery',
+            subGenre3: 'Murder',
         }
+        ]
+
+
+    movies[1] = {};
+        movies[1].title= 'Braveheart'
+        movies[1].yearOfRelease= '1995'
+        movies[1].rating= 'R'
+        movies[1].director= [
+        {
+            firstName:'Mel',
+            lastName: 'Gibson',
+        },
+    ]
+        movies[1].imdbRating= 8.3
+        movies[1].wonAcademyAward= 'yes'
+        movies[1].mypersonalrating = 0
+        movies[1].bestRatingPossible = 4
+        movies[1].genres= [
+        {
+            mainGenre: 'Period piece',
+            subGenre1:'Drama',
+            subGenre2: 'History',
+            subGenre3: 'Biography',
+        },
+    ]
+    movies[2] = {};
+        movies[2].title= 'Imaginary Movie'
+        movies[2].yearOfRelease= '2010'
+        movies[2].rating= 'PG'
+        movies[2].director= [
+        {
+            firstName:'Trevor',
+            lastName: 'Esparza',
+        },
+    ]
+        movies[2].imdbRating= 10
+        movies[2].wonAcademyAward= 'no'
+        movies[2].mypersonalrating = 0
+        movies[2].bestRatingPossible = 4
+        movies[2].genres=[
+        {
+            mainGenre: 'Mama Drama',
+            subGenre1:'Rom-Com',
+            subGenre2: 'DIY',
+            subGenre3: 'YouTuber Extraordinary',
+        },
+    ]
+
+// moviesArray.push(movieTwo,movieOne,movieThree);
+
+function printAllMovies(){
+    for (let i = 0; i < movies.length; i++) {
+        printMovie(movies[i]);
     }
 }
-enterTheCorrectPassword();
+console.log("Printing next function");
+
+function printMovie(movie) {
+    for (let i = 0; i < movie.length; i++) {
+        console.log("Movie Title:" + movie.title);
+        console.log("\tYear of Release: " + movie.yearOfRelease);
+        console.log("\tMPAA rating: " + movie.rating);
+    }
+}
+printDirectorMovies(movies);
+
+
+function printDirectorMovies(){
+    var movieDir = movies.director;
+    if(!movieDir){
+        console.log('No director has been listed');
+    }
+    console.log('\tDirector:');
+    for (let i = 0; i < movieDir.length; i++) {
+        printMovieDirector(movieDir[i]);
+    }
+}
+
+function printMovieDirector(movies){
+
+}
+
+// function printMovieGenres(movie) {
+//     var movieGenre = movies.genres;
+//     if(!movieGenre) {
+//         console.log("\tNo genres have been specified");
+//         return;
+//     }
+//     console.log("\tGenres:");
+//     for (let i = 0; i < movie.genres.length; i++) {
+//         printInfoGenreMovies(movies[i]);
+//     }
+// }
+//
+// function printInfoGenreMovies(genres) {
+//     console.log("\t\tMain Genre: " + movies.genres[mainGenre]);
+//     console.log("\t\tSub Genre: " + movies.genres);
+//     console.log("\t\tSub Genre: " + movies.genres);
+//     console.log("\t\tSub Genre: " + movies.genres);
+// }
+//
+
+movies[0].rateThisMovie = function (){
+    if(this.mypersonalrating + 1 <= this.bestRatingPossible){
+        this.mypersonalrating += 1;
+        console.log("I personally rated this movie at: " + this.mypersonalrating);
+    }else {
+        console.log('This movies can\'t get any better!!');
+    }
+}
+
+
+printAllMovies(movies);
 
 
 
+
+
+
+
+
+// *** Continuing MINI EXERCISE until lunch ***
+// Change the director member of your movies to an object
+// with firstName and lastName members
+// Make an array member for your movies called genres.
+//     It is an array of string elements where each element
+// is one of your movies’ genres from imdb.com
+// and change your printMovie function
+// please cupdate as you complete this ungraded practice exercise
+
+
+// *** last part of MINI EXERCISE ***
+// Add a rate(rating) function to each of your movie objects.
+//     The function takes an int parameter called rating
+// Modify rate(rating) to set a myRating property on that object
+// modify printMovie to display myRating for each movie
+// 15 minutes

@@ -44,4 +44,7 @@ function accum(str) {
 }
 console.log(accum('fgtyh'));
 
-
+//Code from Raymond on objects
+// for (const [key, value] of Object.entries(object1)) {
+//     console.log(`${key}: ${value}`);
+}
