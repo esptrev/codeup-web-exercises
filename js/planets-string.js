@@ -25,7 +25,8 @@
      */
      let newPlanetString = planetsArray.join('<br>');
     console.log(newPlanetString);
-    //Following from David Collins,  couldn't wrap head around this
+
+    //from David Collins,  couldn't wrap head around this
     console.log("<ul>");
     planetsArray.forEach(function (planet){
         console.log("<li>" + planet + "</li>");
@@ -41,6 +42,13 @@
     console.log(slicedPlanets);
     let joinedPlanets = planetsArray[0] + slicedPlanets.join("</li><li>") + planetsArray[9];
     console.log(joinedPlanets);
+    
+
+    // My ul attempt
+    for(let i = 0; i < planetsArray.length; i ++){
+        console.log("<li>" + planet + "</li>");
+    }
+
 
 })();
 
