@@ -11,6 +11,15 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+  var person = {
+        firstName: 'Tevor',
+        lastName: 'Esparza',
+    }
+console.log(person.firstName);
+console.log(person.lastName);
+
+console.log('end of exc 1');
+console.log('             ');
 
     /**
      * TODO:
@@ -21,6 +30,12 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHi = function (){
+        return`${this.firstName} ${this.lastName} would like to say Hi.`;
+    }
+console.log(person.sayHi());
+console.log('end of exc 2');
+console.log('             ');
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +51,40 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+        shoppers.forEach(function (shopper){
+            let discountedAmount = shopper.amount;
+            let discountRate = 0;
+
+            if (shopper.amount > 200) {
+                discountRate= .12;
+                discountedAmount = .88 * shopper.amount;
+            }
+            console.log(`Shopper: ${shopper.name}`)
+            console.log(`\tTotal Bill: $${shopper.amount}`);
+            console.log(`\t\tDiscount: ${discountRate * shopper.amount}`);
+            console.log(`\t\t\tFinal Total: $${discountedAmount}`);
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -91,4 +135,69 @@
      *   `showBookInfo` function.
      */
 
+// })();
+let books = [
+    {
+        title: 'JavaScript & JQuery',
+        author: {
+            firstName: 'Jon',
+            lastName: 'Duckett'
+        }
+    },
+    {
+        title: 'Coding All-In-One for dummies',
+        author: {
+            firstName: 'John',
+            lastName: 'Wiley'
+        }
+    },
+    {
+        title: 'The Real Dad Rules',
+        author: {
+            firstName:'Dan',
+            lastName: 'Pearce'
+        }
+    },
+    {
+        title: 'The Millionaire Next Door',
+        author: {
+            firstName: 'Thomas',
+            lastName: 'Stanley'
+        }
+    },
+    {
+        title: 'The Glass Castle',
+        author: {
+            firstName: 'Jeannette',
+            lastName: 'Walls'
+        }
+    }
+]
+
+books.push(createBook('HTML, CSS & JavaScript Mobile Development', 'William Harrel'))
+books.push(createBook('HTML & CSS', 'Jon Duckett'))
+
+books.forEach(function (book, index) {
+    console.log('Book # ' + (index + 1));
+    showBookInfo(book);
+    console.log('---')
+})
+
+function createBook (aTitle, anAuthor) {
+    let authorArray = anAuthor.split(' ');
+    return {
+        title: aTitle,
+        author: {
+            firstName: authorArray[0],
+            lastName: authorArray[1]
+        }
+    }
+}
+
+function showBookInfo(book) {
+    console.log('Title: ' + book.title);
+    console.log('Author: ' + book.author.firstName + ' ' + book.author.lastName)
+}
+
 })();
+
