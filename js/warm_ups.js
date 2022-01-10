@@ -285,35 +285,31 @@ var movies = [];
 function printAllMovies(){
     for (let i = 0; i < movies.length; i++) {
         console.log((movies[i]));
+        printIndividualMovieInfo(movies[i]);
     }
 }
 printAllMovies(movies);
+console.log('End of function');
 
-console.log(movies[0] [3].director);
-asfasdf
-
-
-// function printIndividualMovieInfo(movie){
-//         console.log('Title:  ' + movie.title);
-//         console.log('\tDate Released:  ' + movie.yearOfRelease);
-//         console.log('\tMPAA stated rating:  ' + movie.rating);
-//         console.log('\tImDB rating:  ' + movie.imdbRating);
-//         console.log('\tMy thoughts:  ' + movie.mypersonalrating);
+function printIndividualMovieInfo(movie){
+        console.log('Title:  ' + movie.title);
+        console.log('\tDate Released:  ' + movie.yearOfRelease);
+        console.log('\tMPAA stated rating:  ' + movie.rating);
+        console.log('\tImDB rating:  ' + movie.imdbRating);
+        console.log('\tMy thoughts:  ' + movie.mypersonalrating);
+        jailBreakDirectorObject(movie);
 
 
-// }
-// function jailBreakDirectorObject(movie){
-//     var ourDirector = movie.director;
-//     for (let i = 0; i < ourDirector.length; i++) {
-//         console.log(ourDirector[i].director[0]);
-//
-//     }
-// }
+}
+function jailBreakDirectorObject(movie){
+    var ourDirector = movie.director.join(" ");
+    // for (let i = 0; i < ourDirector.length; i++) {
+        console.log(ourDirector);
+        // printDirectors(movie);
+}
 // function printDirectors(){
 //     console.log(ourDirector.firstName);
 // }
-
-
 
 
 
