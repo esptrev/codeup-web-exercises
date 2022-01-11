@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register with Us</title>
+</head>
+<body>
+
+<h2>User Login</h2>
+<form method="POST" action="https://request-inspector.glitch.me/">
+<!--	<form method="POST" action="https://www.elformo.com/forms/30ace01a-a323-4c42-ba2d-511df28317a8" >-->
+
+	<p>
+		<label for="username">Username</label>
+		<input id="username" name="username" type="text">
+		<br>
+
+		<label for="password">Password</label>
+		<input id="password" name="password" type="password">
+		<br>
+	</p>
+	<h3>Users Bio</h3>
+	<label for="bio"></label>
+	<p>
+		<textarea id = "bio" name="bio" cols="30" rows="6">Please enter your Bio here</textarea>
+	</p>
+
+
+	<h3>How did you hear about us?</h3>
+
+	<p>
+		<label><input type="radio" name="R1" value="Billboard">Billboard<br></label>
+		<label><input type="radio" name="R1" value="Radio">Radio<br></label>
+		<label><input type="radio" name="R1" value="Internet">Internet<br></label>
+		<label><input type="radio" name="R1" value="">Other <input type="text" name="other_reason" /></label>
+
+	</p>
+
+
+	<h3>How did you hear about us? Multiple answers</h3>
+
+	<p>
+		<label><input type="checkbox" id="os1" name="source" value="billboards">BillBoards</label>
+		<label><input type="checkbox" id="os2" name="source" value="radio">Radio</label>
+		<label><input type="checkbox" id="os3" name="source" value="internet">Internet</label>
+		<label><input type="checkbox" id="os4" name="source" value="other">Other</label>
+		<label><input type="text" id="os5" name="source" value="other source"></label>
+	</p>
+
+
+	<label for="Current Web Browser">What is your current web browser? </label>
+	<select id="Current Web Browser" name="Web Browser">
+		<option value="1">Brave</option>
+		<option value="2">Chrome</option>
+		<option value="3">FireFox</option>
+		<option value="2">Safari</option>
+	</select>
+
+
+	<footer>
+		<br>
+		<br>
+		<br>
+		<button type="submit">Submit Form</button>
+	</footer>
+
+
+
+</form>
+
+
+</body>
+</html>
