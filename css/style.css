@@ -1,0 +1,84 @@
+/* css selector precedence = ID > Class > Element
+the "*" selector is for All of the page.  Its highest order usually sets margins and padding so that everything <br>
+from ground zero
+a direct child = direct decendant  decendent = grand child
+
+class selectors get defined with the period*/
+.fancy-header{
+    align-content: center;
+}
+/*element selectors start with the element itself*/
+h1{
+    color: #0affed;
+    text-align: center;
+    text-decoration: underline;
+}
+h2{
+    color: #badefc;
+    text-decoration: underline;
+}
+h3{
+    text-decoration: underline;
+    font-family: "Apple Chancery";
+    color: #badefc;
+    font-weight: bold;
+
+}
+h4{
+    color: #badefc;
+}
+
+#trevor{
+    color: #595959;
+    text-decoration: underline;
+    font-family: "Apple Chancery";
+    text-align: center;
+    font-weight: bold;
+
+}
+
+/*you target the id attribute with the # sign, targets your divs,sections,containers,etc*/
+body{
+    background-color: #ddd78d;
+    background-image: url("/img/board.jpg");
+}
+ul {
+    list-style-type: square;
+}
+ol{
+    list-style-type: square;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:green;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:darkturquoise;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:beige;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:mediumorchid;
+}
+body{
+    font-family: "Apple Chancery";
+}
+table{
+    font-size: large;
+    color: #463f1a;
+    padding: 50px;
+}
+ul{
+    color: #463f1a;
+}
+ol{
+    color: #463f1a;
+}
