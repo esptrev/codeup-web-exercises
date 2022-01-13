@@ -1,0 +1,18 @@
+body{
+    background-image: url("/img/Peanut_Butter_Texture.jpeg");
+    width: 100%;
+}
+.ingredients{
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: .5em .5em;
+    background-color: rebeccapurple;
+}
+.instructions{
+    width: 1200px;
+    height: 200px;
+    padding: .5em;
+    background-color: violet;
+    margin: 0 auto;
+}

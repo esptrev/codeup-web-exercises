@@ -312,6 +312,18 @@ function jailBreakDirectorObject(movie){
 // }
 
 
+console.log('array to string sans join');
+arrayToSplit = ['me', 'you','us','him','her','she','them']
+let myString = '' ;
+function arrayToString(){
+    for (let i = 0; i < arrayToSplit.length; i++) {
+        myString += arrayToSplit[i];
+    }
+}
+arrayToString(arrayToSplit);
+console.log(myString);
+
+
 
 
 

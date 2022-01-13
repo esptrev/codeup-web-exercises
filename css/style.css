@@ -39,8 +39,10 @@ h4{
 
 /*you target the id attribute with the # sign, targets your divs,sections,containers,etc*/
 body{
-    background-color: #ddd78d;
-    background-image: url("/img/board.jpg");
+    background-color: #826d40;
+    background-image: url("/img/veridianlogo.jpg");
+    background-size: 25%;
+    backdrop-filter: opacity(80);
 }
 ul {
     list-style-type: square;
@@ -73,7 +75,7 @@ body{
 }
 table{
     font-size: large;
-    color: #463f1a;
+    color: #405582;
     padding: 50px;
 }
 ul{
