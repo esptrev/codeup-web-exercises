@@ -32,7 +32,7 @@ a {
     border-radius: 4px;
     text-align: center;
     /*  TODO: Change this flex items basis to 100% of the page  */
-    width: 100%;
+    flex-bottom: 100%;
 }
 
 .card-title {
