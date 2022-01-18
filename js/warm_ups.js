@@ -344,3 +344,19 @@ function removeAll(array, value){
 }
 let bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
 removeAll(bugs,'ant');
+
+
+//Practice js from Raymond on Slack
+let sum = 0
+function sumTheNumbers(inputA, inputB){
+    if(inputA === inputB){
+        console.log(inputA)
+    }else if(inputA < inputB){
+        for (let i = inputA; i < inputB ; i++) {
+            console.log(sum += i)
+        }
+    }
+}
+sumTheNumbers(0, -1); //Expected -1
+sumTheNumbers(2, 2); //Expected 2
+sumTheNumbers(1, 5); //Expected 15
