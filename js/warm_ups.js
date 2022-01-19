@@ -210,106 +210,106 @@ modify printMovie to display myRating for each movie
 */
 
 
-// var movies = [];
-//     movies[0] = {};
-//         movies[0].title= 'The Hateful Eight'
-//         movies[0].yearOfRelease= '2015'
-//         movies[0].rating= 'R'
-//         movies[0].director= [
-//          {
-//         firstName:'Quentin',
-//         lastName: 'Tarantino',
-//          },
-//     ];
-//         movies[0].imdbRating=7.8
-//         movies[0].wonAcademyAward= 'yes'
-//         movies[0].mypersonalrating = 0
-//         movies[0].bestRatingPossible = 4
-//         movies[0].genres= [
-//            {
-//             mainGenre: 'Crime',
-//             subGenre1:'Drama',
-//             subGenre2: 'Mystery',
-//             subGenre3: 'Murder',
-//            }
-//         ];
-//
-//
-//     movies[1] = {};
-//         movies[1].title= 'Braveheart'
-//         movies[1].yearOfRelease= '1995'
-//         movies[1].rating= 'R'
-//         movies[1].director= [
-//             {
-//             firstName:'Mel',
-//             lastName: 'Gibson',
-//              },
-//     ];
-//         movies[1].imdbRating= 8.3
-//         movies[1].wonAcademyAward= 'yes'
-//         movies[1].mypersonalrating = 0
-//         movies[1].bestRatingPossible = 4
-//         movies[1].genres= [
-//            {
-//             mainGenre: 'Period piece',
-//             subGenre1:'Drama',
-//             subGenre2: 'History',
-//             subGenre3: 'Biography',
-//            },
-//     ];
-//     movies[2] = {};
-//         movies[2].title= 'Imaginary Movie'
-//         movies[2].yearOfRelease= '2010'
-//         movies[2].rating= 'PG'
-//         movies[2].director= [
-//         {
-//             firstName:'Trevor',
-//             lastName: 'Esparza',
-//         },
-//     ];
-//         movies[2].imdbRating= 10
-//         movies[2].wonAcademyAward= 'no'
-//         movies[2].mypersonalrating = 0
-//         movies[2].bestRatingPossible = 4
-//         movies[2].genres=[
-//         {
-//             mainGenre: 'Mama Drama',
-//             subGenre1:'Rom-Com',
-//             subGenre2: 'DIY',
-//             subGenre3: 'YouTuber Extraordinary',
-//         },
-//     ];
+var movies = [];
+    movies[0] = {};
+        movies[0].title= 'The Hateful Eight'
+        movies[0].yearOfRelease= '2015'
+        movies[0].rating= 'R'
+        movies[0].director= [
+         {
+        firstName:'Quentin',
+        lastName: 'Tarantino',
+         },
+    ];
+        movies[0].imdbRating=7.8
+        movies[0].wonAcademyAward= 'yes'
+        movies[0].mypersonalrating = 0
+        movies[0].bestRatingPossible = 4
+        movies[0].genres= [
+           {
+            mainGenre: 'Crime',
+            subGenre1:'Drama',
+            subGenre2: 'Mystery',
+            subGenre3: 'Murder',
+           }
+        ];
+
+
+    movies[1] = {};
+        movies[1].title= 'Braveheart'
+        movies[1].yearOfRelease= '1995'
+        movies[1].rating= 'R'
+        movies[1].director= [
+            {
+            firstName:'Mel',
+            lastName: 'Gibson',
+             },
+    ];
+        movies[1].imdbRating= 8.3
+        movies[1].wonAcademyAward= 'yes'
+        movies[1].mypersonalrating = 0
+        movies[1].bestRatingPossible = 4
+        movies[1].genres= [
+           {
+            mainGenre: 'Period piece',
+            subGenre1:'Drama',
+            subGenre2: 'History',
+            subGenre3: 'Biography',
+           },
+    ];
+    movies[2] = {};
+        movies[2].title= 'Imaginary Movie'
+        movies[2].yearOfRelease= '2010'
+        movies[2].rating= 'PG'
+        movies[2].director= [  /*try removing array brackets and just use object curly*/
+        {
+            firstName:'Trevor',
+            lastName: 'Esparza',
+        },
+    ];
+        movies[2].imdbRating= 10
+        movies[2].wonAcademyAward= 'no'
+        movies[2].mypersonalrating = 0
+        movies[2].bestRatingPossible = 4
+        movies[2].genres=[
+        {
+            mainGenre: 'Mama Drama',
+            subGenre1:'Rom-Com',
+            subGenre2: 'DIY',
+            subGenre3: 'YouTuber Extraordinary',
+        },
+    ];
 
 // moviesArray.push(movieTwo,movieOne,movieThree);
 
-// function printAllMovies(){
-//     for (let i = 0; i < movies.length; i++) {
-//         console.log((movies[i]));
-//         printIndividualMovieInfo(movies[i]);
-//     }
-// }
-// printAllMovies(movies);
-// console.log('End of function');
+function printAllMovies(){
+    for (let i = 0; i < movies.length; i++) {
+        console.log((movies[i]));
+        printIndividualMovieInfo(movies[i]);
+    }
+}
+printAllMovies(movies);
+console.log('End of function');
 
-// function printIndividualMovieInfo(movie){
-//         console.log('Title:  ' + movie.title);
-//         console.log('\tDate Released:  ' + movie.yearOfRelease);
-//         console.log('\tMPAA stated rating:  ' + movie.rating);
-//         console.log('\tImDB rating:  ' + movie.imdbRating);
-//         console.log('\tMy thoughts:  ' + movie.mypersonalrating);
-//         jailBreakDirectorObject(movie);
-//
-//
-// }
-// function jailBreakDirectorObject(movie){
-//     var ourDirector = movie.director.join(" ");
-//     // for (let i = 0; i < ourDirector.length; i++) {
-//         console.log(ourDirector);
-//         // printDirectors(movie);
-// }
-// function printDirectors(){
-//     console.log(ourDirector.firstName);
-// }
+function printIndividualMovieInfo(movie){
+        console.log('Title:  ' + movie.title);
+        console.log('\tDate Released:  ' + movie.yearOfRelease);
+        console.log('\tMPAA stated rating:  ' + movie.rating);
+        console.log('\tImDB rating:  ' + movie.imdbRating);
+        console.log('\tMy thoughts:  ' + movie.mypersonalrating);
+        jailBreakDirectorObject(movie);
+
+
+}
+function jailBreakDirectorObject(movie){
+    // var ourDirector = movie.director.join(" ");
+    // for (let i = 0; i < ourDirector.length; i++) {
+        console.log(movie.director[]);
+        // printDirectors(movie);
+}
+function printDirectors(){
+    console.log(ourDirector.firstName);
+}
 
 
 // console.log('array to string sans join');
@@ -347,16 +347,43 @@ removeAll(bugs,'ant');
 
 
 //Practice js from Raymond on Slack
-let sum = 0
+
 function sumTheNumbers(inputA, inputB){
-    if(inputA === inputB){
-        console.log(inputA)
-    }else if(inputA < inputB){
-        for (let i = inputA; i < inputB ; i++) {
-            console.log(sum += i)
+    let sum = 0
+    if(inputA < inputB){
+        for (let i = inputA; i <= inputB ; i++) {
+            sum += i;
+        }
+    }else {
+        for (let i = inputB; i <= inputA ; i++) {
+            sum += i;
         }
     }
+    return sum;
 }
-sumTheNumbers(0, -1); //Expected -1
-sumTheNumbers(2, 2); //Expected 2
-sumTheNumbers(1, 5); //Expected 15
+console.log(sumTheNumbers(0, -1)); //Expected -1
+console.log(sumTheNumbers(1,2)); //Expected 2
+console.log(sumTheNumbers(1, 5)); //Expected 15
+
+
+var myCats = [
+    {
+        catName: "Fifi",
+        age: 5
+    },
+    {
+        catName: "Fluffy",
+        age: 3
+    },
+    {
+        catName: "Abby",
+        age: 7
+    }
+];
+function getNthCat(array, n){
+    return array[n];
+}
+// print out the cat at index 1
+let aCat = getNthCat(myCats, 1);
+console.log(aCat.catName);
+console.log(aCat.age);

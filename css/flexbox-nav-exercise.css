@@ -3,20 +3,64 @@
 }
 body {
     margin: 0;
+    font-family: Montserrat;
 }
 nav {
-    background: #333333;
+    background: lightgray;
 }
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 nav a {
     text-decoration: none;
-    color: white;
-    font-family: Verdana;
+    color: black;
+    display: inline-block; /* inline-block to increase clickable area beyond the text */
+    padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
 }
 nav a:hover {
-    background: black;
+    color: blue;
+}
+/*nav ul li:nth-child(4) {*/
+/*    !**/
+/*        this allows the last flex item to be right justified*/
+/*        by filling remaining space to the left of the flex item with margin*/
+/*    *!*/
+/*    margin-left: auto;*/
+/*}*/
+
+.navbar{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a{
+    display: inline-block;
+}
+.icons{
+    display: flex;
+    justify-content: right;
+    margin-left: auto;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.logo{
+    justify-content: center;
+    margin: auto;
+    font-size: 3em;
+    align-items: center;
+    display: inline-block;
+}
+.letters{
+    display: flex;
+    justify-content: left;
+    margin-right: auto;
+    align-content: center;
+    flex-wrap: wrap;
 }
