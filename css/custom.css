@@ -1,0 +1,27 @@
+.navbar{
+    background-color: darkgray;
+}
+
+.collapse {
+    display: flex;
+}
+.nav-link.sign-up{
+    margin-left: 15em;
+}
+.jumbotron{
+    background-image: url("/img/pizzabackground.png");
+    width: 100%;
+    margin: 0;
+}
+.display-6{
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    color: rgba(0,0,0,.5);
+    width: 100%;
+}
+.nav.nav-tabs>li{
+    margin: 5px;
+}
+.container-fluid{
+    padding: 0;
+}
