@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -11,37 +11,49 @@
 	<title>Pizza JumboTron</title>
 </head>
 <body>
-<nav id="header" class="navbar navbar-expand-lg navbar-light">
-	<div  id="topHead" class="container-fluid">
-		<div class="row">
-			<div class="col-4"><a class="navbar-brand" href="#">Pizza World</a></div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Order Online<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Menu</a>
-					</li>
-
-					<form class="form-inline d-flex justify-content-end">
-						<label for="zip"></label>
-						<input class="form-control mr-sm-2"  id="zip" type="search" placeholder="ZipCode" aria-label="store search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Store Locations</button>
-					</form>
-
-					<li class="nav-item">
-					<a class="nav-link sign-up" href="#" tabindex="3" aria-disabled="true">Sign Up</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+<nav class="navbar navbar-expand-lg navbar-light">
+	<a href="#">Pizza World</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Order Online</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown">Menu</a>
+				<div class="dropdown-menu" >
+					<a class="dropdown-item" href="#">Pizzas</a>
+					<a class="dropdown-item" href="#">Drinks</a>
+					<a class="dropdown-item" href="#">Wings</a>
+					<a class="dropdown-item" href="#">Calzones</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="emailSignUp" href="#">Sign Up</a>
+			</li>
+		</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="ZipCode">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
 	</div>
 </nav>
+
+
+<!--	<div class="container-fluid">-->
+<!--		<div class="row">-->
+<!--			<div class="col-md justify-left">Order Online</div>-->
+<!--			<div class="col-md">Menu with drop down</div>-->
+<!--			<div class="col-md">Search bar with text</div>-->
+<!--			<div class="col-md-2 justify-right">Sign up for emails</div>-->
+<!--		</div>-->
+<!--	</div>-->
+
 <!--JumboTron Section-->
 <div class="container-fluid" style="padding: 0;">
 
@@ -53,19 +65,19 @@
 </div>
 <!--Make your pizza section-->
 <div class="container">
-	<h2>Make a pizza!</h2>
+		<h2>Make a pizza!</h2>
 <!--Selection tabs-->
-	<ul class="nav nav-tabs" id="myTab" role="tablist">
-		<li class="nav-item" role="presentation">
-			<a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">Size & Crusts</a>
-		</li>
-		<li class="nav-item" role="presentation">
-			<a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false">Cheese & Sauce</a>
-		</li>
-		<li class="nav-item" role="presentation">
-			<a class="nav-link" id="toppins-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false">Toppings</a>
-		</li>
-	</ul>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">Size & Crusts</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false">Cheese & Sauce</a>
+			</li>
+			<li class="nav-item" role="presentation">
+				<a class="nav-link" id="toppins-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false">Toppings</a>
+			</li>
+		</ul>
 <!--Crusts-->
 	<div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
@@ -91,9 +103,9 @@
 							</ul>
 						</div>
 				</div>
-				<div class="card-footer d-flex justify-content-end">
-					<a id="to-cheese" type="button" class="btn btn-primary" href="#cheese">Cheeses & Sauces</a>
-				</div>
+					<div class="card-footer d-flex justify-content-end">
+						<a id="to-cheese" type="button" class="btn btn-primary" href="#cheese">Cheeses & Sauces</a>
+					</div>
 			</div>
 		</div>
 <!--Cheese & Sauce-->
@@ -190,21 +202,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>-->
 
 <!--<script>-->
