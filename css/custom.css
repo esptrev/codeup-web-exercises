@@ -1,12 +1,15 @@
 .navbar{
     background-color: darkgray;
 }
+.header{
+    display: flex;
+}
 
 .collapse {
     display: flex;
 }
 .nav-link.sign-up{
-    margin-left: 15em;
+    margin-left: 26em;
 }
 .jumbotron{
     background-image: url("/img/pizzabackground.png");
@@ -24,4 +27,26 @@
 }
 .container-fluid{
     padding: 0;
+}
+.list-group-item>input{
+    margin: .5em;
+}
+footer>a {
+float: right;
+    margin-top: 1em;
+}
+button.btn.btn-secondary.dropdown-toggle{
+    float: right;
+}
+.list-group-item>label>input{
+    margin: .5em;
+}
+.card{
+    margin: 1em;
+}
+.card-header{
+    background-color: #3B94D9;
+}
+.list-group-item.hhh{
+    background-color: #bac7ef;
 }

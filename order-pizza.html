@@ -11,31 +11,35 @@
 	<title>Pizza JumboTron</title>
 </head>
 <body>
-<h1></h1>
-<nav class="navbar navbar-expand-lg navbar-light">
-	<a class="navbar-brand" href="#">Pizza World</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
+<nav id="header" class="navbar navbar-expand-lg navbar-light">
+	<div  id="topHead" class="container-fluid">
+		<div class="row">
+			<div class="col-4"><a class="navbar-brand" href="#">Pizza World</a></div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Order Online<span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Menu</a>
-			</li>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Order Online<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Menu</a>
+					</li>
 
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="ZipCode" aria-label="store search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Store Locations</button>
-			</form>
+					<form class="form-inline d-flex justify-content-end">
+						<label for="zip"></label>
+						<input class="form-control mr-sm-2"  id="zip" type="search" placeholder="ZipCode" aria-label="store search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Store Locations</button>
+					</form>
 
-			<li class="nav-item">
-				<a class="nav-link sign-up" href="#" tabindex="3" aria-disabled="true">Sign Up</a>
-			</li>
-		</ul>
+					<li class="nav-item">
+					<a class="nav-link sign-up" href="#" tabindex="3" aria-disabled="true">Sign Up</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </nav>
 <!--JumboTron Section-->
@@ -50,7 +54,7 @@
 <!--Make your pizza section-->
 <div class="container">
 	<h2>Make a pizza!</h2>
-
+<!--Selection tabs-->
 	<ul class="nav nav-tabs" id="myTab" role="tablist">
 		<li class="nav-item" role="presentation">
 			<a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">Size & Crusts</a>
@@ -62,85 +66,126 @@
 			<a class="nav-link" id="toppins-tab" data-toggle="tab" href="#toppings" role="tab" aria-controls="toppings" aria-selected="false">Toppings</a>
 		</li>
 	</ul>
-	<div class="tab-content" id="myTabContent">
+<!--Crusts-->
+	<div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
 			<div class="card">
-				<div class="card-header">
-					select your size and crust
+				<div class="card-header bg-primary">
+					Select pizza size and Choice of crusts
 				</div>
 				<div class="card-body">
-					<div class="card" id="hand tossed" style="width: 18rem;">
+					<div class="card" id="hand tossed">
 						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Hand Tossed</li>
+							<li class="list-group-item hhh">Hand Tossed</li>
 							<li class="list-group-item">Garlic seasoned crust with rich buttery taste</li>
-							<li class="list-group-item">small 10"</li>
-							<li class="list-group-item">medium 12"</li>
+							<li class="list-group-item"><input type="radio" aria-label="radio hand tossed small">Small 10"</li>
+							<li class="list-group-item"><input type="radio" aria-label="radio hand tossed medium">Medium 12"</li>
 						</ul>
-						<div class="card" id="thin crispy" style="width: 18rem;">
+					</div>
+						<div class="card" id="thin crispy">
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item" id="option">Crispy Thin</li>
+								<li class="list-group-item hhh" id="option">Crispy Thin</li>
 								<li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-								<li class="list-group-item"><input type="radio" aria-label="radio button medium sized pizza">Medium 12"</li>
-								<li class="list-group-item"><input type="radio" aria-label="radio button large sized pizza"> Large 16"</li>
+								<li class="list-group-item"><input type="radio" aria-label="radio crispy medium pizza">Medium 12"</li>
+								<li class="list-group-item"><input type="radio" aria-label="radio crispy large pizza"> Large 16"</li>
 							</ul>
 						</div>
-					</div>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+				<div class="card-footer d-flex justify-content-end">
+					<a id="to-cheese" type="button" class="btn btn-primary" href="#cheese">Cheeses & Sauces</a>
 				</div>
 			</div>
 		</div>
-
+<!--Cheese & Sauce-->
 		<div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
 			<div class="card">
-				<div class="card-header">
-					Select your cheese and sauce
+				<div class="card-header bg-primary">
+					Cheese and Sauce selections
 				</div>
 				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<div class="card" style="width: 18rem;">
+					<div class="card">
 						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
+							<li class="list-group-item hhh">Cheese</li>
+							<li class="list-group-item">
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">How much cheese?</label>
+									<select class="form-control" id="exampleFormControlSelect1">
+										<option>Light</option>
+										<option>Regular</option>
+										<option>Little Extra</option>
+										<option>Extra Extra</option>
+										<option>I'm a mouse!</option>
+									</select>
+								</div>
+							</li>
 						</ul>
-						<div class="card" style="width: 18rem;">
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">Cras justo odio</li>
-								<li class="list-group-item">Dapibus ac facilisis in</li>
-								<li class="list-group-item">Vestibulum at eros</li>
-							</ul>
-						</div>
 					</div>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+
+						<div class="card">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item hhh">Sauce</li>
+								<li class="list-group-item">
+									<div class="form-group">
+										<label for="sauce-type">Sauce choice?</label>
+										<select class="form-control" id="sauce-type">
+											<option>Tomato</option>
+											<option>Marinara</option>
+											<option>BBQ</option>
+											<option>Alfredo</option>
+											<option>Ranch</option>
+										</select>
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="form-group">
+										<label for="sauce-quantity">How much sauce?</label>
+										<select class="form-control" id="sauce-quantity">
+											<option>Light</option>
+											<option>Regular</option>
+											<option>Little Extra</option>
+											<option>Extra Extra</option>
+											<option>I really love the Sauce!</option>
+										</select>
+									</div>
+								</li>
+							</ul>
+					</div>
+				</div>
+				<div class="card-footer d-flex justify-content-end">
+					<a id="to-size" type="button" class="btn btn-primary" href="#size">Previous Step</a>
+					<a id="to-toppings" type="button" class="btn btn-primary" href="#toppings">Next Step</a>
 				</div>
 			</div>
 		</div>
-
+<!--Toppings-->
 		<div class="tab-pane fade" id="toppings" role="tabpanel" aria-labelledby="toppings-tab">
 			<div class="card">
-				<div class="card-header">
+				<div class="card-header bg-primary">
 					Select your toppings
 				</div>
 				<div class="card-body">
-					<h5 class="card-title">Special title treatment</h5>
-					<div class="card" style="width: 18rem;">
+					<div class="card">
 						<ul class="list-group list-group-flush">
-							<li class="list-group-item">Cras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Vestibulum at eros</li>
+							<li class="list-group-item hhh">Choose Meats</li>
+							<li class="list-group-item"><label><input type="checkbox"></label>Beef</li>
+							<li class="list-group-item"><label><input type="checkbox"></label>Ham</li>
+							<li class="list-group-item"><label><input type="checkbox"></label>Philly Steak</li>
+							<li class="list-group-item"><label><input type="checkbox"></label>Bacon</li>
 						</ul>
-						<div class="card" style="width: 18rem;">
+					</div>
+						<div class="card">
 							<ul class="list-group list-group-flush">
-								<li class="list-group-item">Cras justo odio</li>
-								<li class="list-group-item">Dapibus ac facilisis in</li>
-								<li class="list-group-item">Vestibulum at eros</li>
+								<li class="list-group-item hhh">Choose Veggies</li>
+								<li class="list-group-item"><label><input type="checkbox"></label>Green Peppers</li>
+								<li class="list-group-item"><label><input type="checkbox"></label>Mushrooms</li>
+								<li class="list-group-item"><label><input type="checkbox"></label>Onions</li>
+								<li class="list-group-item"><label><input type="checkbox"></label>Jalapenos</li>
 							</ul>
 						</div>
-					</div>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+				<div class="card-footer d-flex justify-content-end">
+					<a type="button" href="#cheese" class="btn btn-secondary">Previous</a>
+					<a type="button" href="https://java.codeup.com/html-css/css-ii/bootstrap-grid-system/" class="btn btn-primary">Checkout</a>
 				</div>
 			</div>
 		</div>
