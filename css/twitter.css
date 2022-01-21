@@ -105,10 +105,10 @@ a {
 }
 .media-body{
     width: calc(100% - 50px);
-    float: right;
-    border-bottom: 2px solid black;
+    /*float: right;*/
+    /*border-bottom: 2px solid black;*/
     clear-side: left;
-    background-color: #595959;
+    background-color: #f5f1f1;
     display: inline-block;
 
 }
