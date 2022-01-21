@@ -1,0 +1,31 @@
+#nameRow{
+    text-align: center;
+    width: 100%;
+}
+h3 {
+    width: 100%;
+    color: cadetblue;
+}
+#titleRow {
+    width: 100%;
+    text-align: center;
+}
+#titleRow{
+    width: 100%;
+    text-align: center;
+}
+h4  {
+    width: 100%;
+    text-align: center;
+    color: #595959;
+    background-color: cadetblue;
+}
+#contactInfo{
+    text-align: center;
+}
+hr{
+    border: none;
+    height: 2px;
+    background-color: #595959;
+
+}
