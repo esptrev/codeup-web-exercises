@@ -41,7 +41,7 @@ h4{
 body{
     background-color: #826d40;
     background-image: url("/img/veridianlogo.jpg");
-    background-size: 25%;
+    background-size: auto;
     backdrop-filter: opacity(80);
 }
 ul {

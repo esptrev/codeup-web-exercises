@@ -362,7 +362,7 @@ function sumTheNumbers(inputA, inputB){
     return sum;
 }
 console.log(sumTheNumbers(0, -1)); //Expected -1
-console.log(sumTheNumbers(1,2)); //Expected 2
+console.log(sumTheNumbers(1,2)); //Expected 3
 console.log(sumTheNumbers(1, 5)); //Expected 15
 
 
