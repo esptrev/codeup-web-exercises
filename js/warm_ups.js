@@ -304,7 +304,7 @@ function printIndividualMovieInfo(movie){
 function jailBreakDirectorObject(movie){
     // var ourDirector = movie.director.join(" ");
     // for (let i = 0; i < ourDirector.length; i++) {
-        console.log(movie.director[]);
+        console.log(movie.director);
         // printDirectors(movie);
 }
 function printDirectors(){
@@ -387,3 +387,13 @@ function getNthCat(array, n){
 let aCat = getNthCat(myCats, 1);
 console.log(aCat.catName);
 console.log(aCat.age);
+
+
+
+function reverseString(inStr){
+    return(inStr.split('').reverse().join(''));
+}
+console.log(reverseString('trevor'));
+
+
+
