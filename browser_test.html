@@ -1,46 +1,51 @@
-<h1>List One</h1>
-<ul>
-    <li class="odd list-one-item">List 1, Item 1</li>
-    <li class="even list-one-item">List 1, Item 2</li>
-</ul>
-<h1>List Two</h1>
-<ul>
-    <li class="odd list-two-item">List 2, Item 1</li>
-    <li class="even list-two-item">List 2, Item 2</li>
-</ul>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>External JS</title>
+    <script src="js/browsertest.js"></script>
+</head>
+<body>
+<a href="http://www.yahoo.com" id="search-link">Web Search</a>
 <script>
     "use strict";
     (function() {
-        // Get all elements with class 'even'
-        var evenElements = document.getElementsByClassName('even');
+        // Get the search link anchor by id
+        var searchLink = document.getElementById("search-link");
 
-        // Print the first element
-        console.log(evenElements[0]); // Prints li.even.list-one-item
+        // Does an element have an attribute?
+        console.log(searchLink.hasAttribute("href")); // Prints true
+        console.log(searchLink.hasAttribute("class")); // Prints false
 
-        // Print all elements
-        for (var i = 0; i < evenElements.length; i++) {
-            console.log(evenElements[i]);
-        }
+        // Get an attribute value
+        console.log(searchLink.getAttribute("href")); // Prints "http://www.yahoo.com"
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
+        // Add or modify an attribute
+        searchLink.setAttribute("class", "btn btn-default");
+        // Adds the attribute class and sets it to "btn btn-default"
 
-        var listItems = document.getElementsByTagName('li');
+        searchLink.setAttribute("href", "http://google.com");
+        // Changes the href attribute to "http://google.com"
 
-        // Print the first list item
-        console.log(listItems[0]); // Prints li.odd.list-one-item
-
-        // Print all the list items
-        for (var i = 0; i < listItems.length; i++) {
-            console.log(listItems[i]);
-        }
-
-        // Prints
-        // li.odd.list-one-item
-        // li.even.list-one-item
-        // li.odd.list-two-item
-        // li.even.list-two-item
+        // Remove an attribute
+        searchLink.removeAttribute("class"); // Remove the class attribute
     })();
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
