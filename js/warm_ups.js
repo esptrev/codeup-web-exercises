@@ -396,4 +396,23 @@ function reverseString(inStr){
 console.log(reverseString('trevor'));
 
 
+// Write a function called findAverage that takes in an array of integers representing grades and returns the average.
+//     Example input: [95, 74, 86, 100]
+// Example output: 88.75
+console.log('find arry avg warmup')
+
+function findAverage(array) {
+    let totalOfArray = 0;
+    for (let i = 0; i < array.length; i++) {
+        totalOfArray += array[i];
+    }
+    return totalOfArray / array.length
+}
+console.log(findAverage([95,74,86,100]));
+
+
+
+
+
+
 

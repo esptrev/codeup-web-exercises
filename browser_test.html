@@ -1,111 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Selectors Exercise</title>
-    <link rel="stylesheet" href="css/browsertest.css">
-</head>
-<body>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
-<article class="card">
-    <section>
-        <img src="images/profile.png" alt="profile-image" >
-    </section>
-    <section class="text-section">
-        <h2>Ron Swanson</h2>
-        <h3>Director</h3>
-        <hr>
-    </section>
-    <section class="icons">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </section>
-</article>
+<h1>List One</h1>
+<ul>
+    <li class="odd list-one-item">List 1, Item 1</li>
+    <li class="even list-one-item">List 1, Item 2</li>
+</ul>
+<h1>List Two</h1>
+<ul>
+    <li class="odd list-two-item">List 2, Item 1</li>
+    <li class="even list-two-item">List 2, Item 2</li>
+</ul>
 
+<script>
+    "use strict";
+    (function() {
+        // Get all elements with class 'even'
+        var evenElements = document.getElementsByClassName('even');
 
+        // Print the first element
+        console.log(evenElements[0]); // Prints li.even.list-one-item
 
+        // Print all elements
+        for (var i = 0; i < evenElements.length; i++) {
+            console.log(evenElements[i]);
+        }
 
+        // Prints:
+        // li.even.list-one-item
+        // li.even.list-two-item
 
+        var listItems = document.getElementsByTagName('li');
 
+        // Print the first list item
+        console.log(listItems[0]); // Prints li.odd.list-one-item
 
-</body>
-</html>
+        // Print all the list items
+        for (var i = 0; i < listItems.length; i++) {
+            console.log(listItems[i]);
+        }
 
-
-
-
-
+        // Prints
+        // li.odd.list-one-item
+        // li.even.list-one-item
+        // li.odd.list-two-item
+        // li.even.list-two-item
+    })();
+</script>
