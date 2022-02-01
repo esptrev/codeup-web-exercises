@@ -400,7 +400,6 @@ console.log(reverseString('trevor'));
 //     Example input: [95, 74, 86, 100]
 // Example output: 88.75
 console.log('find arry avg warmup')
-
 function findAverage(array) {
     let totalOfArray = 0;
     for (let i = 0; i < array.length; i++) {
@@ -410,9 +409,42 @@ function findAverage(array) {
 }
 console.log(findAverage([95,74,86,100]));
 
+// morning JS warmup:
+//     write a function called sumOfSquares(a, b)
+// takes 2 parameters called a and b
+// returns the sum of the squares of a and b
+// i.e., (a to the power of 2) + (b to the power of 2)
+// e.g., console.log(sumOfSquares(2, 3));
+// will return 13.
+
+console.log('sum of squares warm-up');
+function sumOfSquares(a,b){
+    return(Math.pow(a,2) + Math.pow(b,2))
+}
+console.log(sumOfSquares(2,3))
+
+// Write a function called whichStringIsLonger() that takes two parameters and returns one of 4 values:
+//     returns "first" if the first string parameter is longer
+// returns "second" if the second parameter is longer
+// returns "neither" if they are the same length
+// returns false if either or both of the parameters are not strings
 
 
-
-
-
-
+function whichStringIsLonger (stra, strb){
+    if(typeof stra !== 'string' || typeof strb !== 'string'){
+        return false;
+    }
+    if(stra.length > strb.length){
+        return "First"
+    }
+    if(strb.length > stra.length){
+        return "Second";
+    }
+    if(strb.length === stra.length)
+        return "Neither";
+}
+console.log(whichStringIsLonger("bobby", "lou")); // returns first
+console.log(whichStringIsLonger("bob", "louise")); // returns second
+console.log(whichStringIsLonger("bob", "lou")); // returns neither
+console.log(whichStringIsLonger("bobby", 2)); // returns false
+console.log(whichStringIsLonger(1, "lou")); // returns false
