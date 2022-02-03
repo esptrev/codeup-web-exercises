@@ -47,4 +47,28 @@ console.log(accum('fgtyh'));
 //Code from Raymond on objects
 // for (const [key, value] of Object.entries(object1)) {
 //     console.log(`${key}: ${value}`);
+// }
+// Write a function that returns the SUM of a sequence of numbers. This sequence is determined by three variables: start, finish, and step. The sequence begins at start, ends at finish, and goes up by step until it reaches finish or a number that when increased by step would go past finish.
+
+// Input: start: 1 finish: 4 step: 1 | Output: 10
+// Input: start: 4 finish: 10 step: | Output: 13
+
+function sum(sequence){
+    let total = 0;
+    for (let i = 0; i < sequence.length; i++) {
+        total += sequence[i];
+    }
+    console.log(total);
 }
+sum([1,2,3,4]);
+
+/* Given a string of any length with any characters in it, write a function to determine whether or not the string contains the whole word "english". The order of characters/spelling is important, a string "agkjnenglishsad" would return true while "asdneglihsth" would return false. Upper and lower case does not matter. Return values should be booleans (true/false).
+*/
+
+function findSubString(string){
+    let partial = 'english';
+   return !!string.toLowerCase().includes(partial);
+
+}
+console.log(findSubString("SMFENgliSHasnD"));
+// findSubString("");

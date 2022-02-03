@@ -448,3 +448,40 @@ console.log(whichStringIsLonger("bob", "louise")); // returns second
 console.log(whichStringIsLonger("bob", "lou")); // returns neither
 console.log(whichStringIsLonger("bobby", 2)); // returns false
 console.log(whichStringIsLonger(1, "lou")); // returns false
+
+// write a function called sumOfThreeNumbers that returns the sum of the 3 numeric arguments provided (i.e., it has 3 parameters)
+// if any of the parameters are non-numeric then return false
+//
+console.log(sumOfThreeNumbers(1, 2, 3)); // return 6
+console.log(sumOfThreeNumbers(-10, 2, 3)); // return -5
+console.log(sumOfThreeNumbers(1, 2, "bob")); // return false
+
+function sumOfThreeNumbers (p1,p2,p3){
+    if (isNaN(parseInt(p1)) || isNaN(parseInt(p2)) || isNaN(parseInt(p3))){
+        return false;
+    }else {
+        return p1 + p2 + p3;
+    }
+}
+
+function inchesToCentimeters (inches){
+    const centsInInches = 2.54;
+    if(isNaN(parseInt(inches))){
+        return false;
+    }
+    return parseInt(inches) * centsInInches;
+}
+
+console.log(inchesToCentimeters(5));
+console.log(inchesToCentimeters(1));
+console.log(inchesToCentimeters(10));
+console.log(inchesToCentimeters('bob'));
+console.log(inchesToCentimeters(true));
+
+function upperCase (paramString){
+    if(typeof paramString !== 'string'){
+        return false;
+    }else {
+        return paramString.toUpperCase();
+    }
+}

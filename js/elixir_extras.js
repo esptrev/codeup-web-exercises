@@ -13,7 +13,7 @@ console.log(isOdd(4));
 
 // -Make a function named `isEven(number)`
 function isEven(num){
-    return num
+    return num % 2 === 0;
 }
 console.log(isEven(5));
 // - Make a function named `identity(input)` that returns the input exactly as
@@ -26,7 +26,7 @@ console.log(identity("Hello Codeup"));
 // - Make a function named `isFive(input)`
 function isFive(input){
 }
-isFive()
+
 // - u8
 // - Make a function named `addFive(input)` that adds five to some input.
 function addFive(num){
@@ -428,7 +428,7 @@ console.log(noStringsAttached())
 // is an "a" (otherwise, return false).
 function whereIsTheA(string){
     return((string.charAt(string.length - 1) === "a"))
-        return true;
+
 }
 console.log(whereIsTheA("pizza"));
 //
