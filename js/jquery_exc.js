@@ -30,14 +30,14 @@
     // alert(firstULContents);
 
     let contentsFirstDiv = $('#firstDiv').html();
-     // alert(contentsFirstDiv);
+    // alert(contentsFirstDiv);
 
     // red border around codeup class elements
     $('.codeup').css('border', 'solid red 5px');
 
 //    set font size on li elements
-    $('.import,li').css('font-size', '24px');
-    $('.notImport, p').css('font-family', 'Papyrus')
+    $('li').css('font-size', '50px');
+    $('.notImport').css('font-family', 'Papyrus')
 
 //    highlight all h1,li elements
 
@@ -49,9 +49,18 @@
 
 //    border around all direct children to ul elements with notImport class
 
-    $('ul.notImport > li').css('border', '3px double blue');
+    $('ul.notImport > li').css('border', '3px dashed blue');
 
+    $('.codeup').hover(
+        function () {
+            $(this).css('background-color', 'rgba(254,1,154,1)');
+            $(this).css('border', '10px dashed rgba(21,244,238,1)');
+        },
+        function () {
+            $(this).css('background-color', '#FFF');
+            $(this).css('border', '3px double red');
+        }
+    );
+    $('#firstDiv').css('font-family' , 'Comic Sans MS');
 
-
-
-}) (); /* close IIFE */
+})(); /* close IIFE */
