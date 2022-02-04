@@ -51,6 +51,9 @@
 
     $('ul.notImport > li').css('border', '3px dashed blue');
 
+
+    // ON Hover, you need In/Out to revert. Element will stay 'stuck' on hover in otherwise
+
     $('.codeup').hover(
         function () {
             $(this).css('background-color', 'rgba(254,1,154,1)');
@@ -61,6 +64,25 @@
             $(this).css('border', '3px double red');
         }
     );
-    $('#firstDiv').css('font-family' , 'Comic Sans MS');
+    $('#firstDiv').css('font-family', 'Comic Sans MS');
+
+//    Make all p tags have a font of 18px on dbl-click
+
+    let dblP = function () {
+        $(this).css('font-size', '18px');
+    }
+    $('p').dblclick(dblP);
+
+//    Make all li text color red when hover, reset to black when not
+
+    $('li').hover(
+        function () {
+            $(this).css('color', 'red');
+        },
+        function () {
+            $(this).css('color', 'black');
+        }
+    );
+
 
 })(); /* close IIFE */
