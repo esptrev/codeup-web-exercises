@@ -72,3 +72,58 @@ function findSubString(string){
 }
 console.log(findSubString("SMFENgliSHasnD"));
 // findSubString("");
+let scores =[10,5,20,20,4,5,2,25,1]
+function breakingRecords(scores) {
+    let maxCount = 0;
+    let minCount = 0;
+    let maxScore = scores[0]
+    let minScore = scores[0];
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] < minScore) {
+            minScore = scores[i];
+            minCount++;
+        } else if(maxScore < scores[i]) {
+            maxScore = scores[i];
+            maxCount++;
+        }
+    }
+    return [maxCount,minCount];
+
+}
+console.log(breakingRecords(scores));
+
+/* mission: split or combine strings base one first/second characters of string
+ S = split, C = combine  second code  M = method , V = variable, C = class
+ in the case of split operation the input will be camelCased and need to be split into
+ space delimited list of words all lower cased
+ in the combine operation inputs will be a space delimited set of words all lower cased that must be combined
+ into appropriate camelCased string. Strings with M need to end with empty parenthesis strings with C need to have
+ first letter of every word capitalized
+ */
+
+function splitInput(input){
+    if (input.charAt(0) === "S"){
+        for (let i = 4; i < input.length; i++) {
+            if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
+                let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
+                console.log(spacedInput);
+            }
+        }
+
+    }else {
+        let deleted = input.replaceAll(" ","X");
+        for (let i = 0; i < deleted.length; i++) {
+            if(this.charAt(i) === "X")
+
+        }
+        console.log(camelCased);
+            }
+
+
+
+
+    }
+
+
+console.log(splitInput("S;M;plasticCup"));
+console.log(splitInput("C;M;white sheet of paper"));
