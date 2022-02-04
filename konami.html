@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+<audio id="matrixSong" src="img/2-20.%20Immaculate%20Crucifixion.mp3"></audio>
+
+<script src="/js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    //konamiKode = codeup
+    let konamiKode = [67,79,68,69,85,80];
+    let konamiIndex = 0;
+    let music = document.getElementById('matrixSong');
+    $(document).keyup(function(event){
+        event.preventDefault();
+        console.log(event.which);
+        const key = event.keyCode
+            if(key === konamiKode[konamiIndex]){
+                konamiIndex++
+	            if(konamiIndex === konamiKode.length){
+                    $('h1').css('font-size', '50px');
+                    $('body').css("background-image" , "url(/img/wallpaper2you_248920.gif)");
+                     music.play();
+
+	            }
+            }else{
+                konamiIndex = 0;
+            }
+    });
+
+
+
+</script>
+
+
+
+</body>
+</html>
