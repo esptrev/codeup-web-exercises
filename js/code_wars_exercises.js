@@ -101,29 +101,48 @@ console.log(breakingRecords(scores));
  first letter of every word capitalized
  */
 
-function splitInput(input){
-    if (input.charAt(0) === "S"){
-        for (let i = 4; i < input.length; i++) {
-            if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
-                let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
-                console.log(spacedInput);
-            }
-        }
+// function splitInput(input){
+//     if (input.charAt(0) === "S"){
+//         for (let i = 4; i < input.length; i++) {
+//             if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
+//                 let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
+//                 console.log(spacedInput);
+//             }
+//         }
+//
+//     }else {
+//         let deleted = input.replaceAll(" ","X");
+//         for (let i = 0; i < deleted.length; i++) {
+//             if(this.charAt(i) === "X"){
+//                 deleted = deleted.replace(.charAt(i + 1). )
+//             }
+//         }
+//
+//             }
+//
+//
+//
+//
+//     }
+//
+//
+// console.log(splitInput("S;M;plasticCup"));
+// console.log(splitInput("C;M;white sheet of paper"));
 
-    }else {
-        let deleted = input.replaceAll(" ","X");
-        for (let i = 0; i < deleted.length; i++) {
-            if(this.charAt(i) === "X")
-
-        }
-        console.log(camelCased);
-            }
+let input = ("C;M;white sheet of paper");
+let splitArray = input.split();
+console.log(splitArray);
 
 
 
-
+function isPrime(num){
+    if(num < 2){
+        return false;
     }
-
-
-console.log(splitInput("S;M;plasticCup"));
-console.log(splitInput("C;M;white sheet of paper"));
+    if(num === 2){
+        return true;
+    }
+    if(num % 2 === 0){
+        return false;
+    }
+}
