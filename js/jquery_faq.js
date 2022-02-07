@@ -15,20 +15,18 @@
         $(this).next().toggleClass('invisible');
     });
 
-
     $('#change-li').click(function (event){
-        event.preventDefault();
-        $('ul').children().last().css('background-color', 'yellow');
+        $('ul').each(function(){
+            $(this).children().last().css('background-color', 'yellow');
+        })
     })
 
     $('h3').click(function (event){
-        event.preventDefault();
         $(this).next().css('font-weight', 'bolder');
     })
 
     $('li').click(function (event){
-        event.preventDefault();
-        $(this).parent().children().first().css("color", 'blue');
+        $(this).parent().children().first().css('color', 'blue');
     })
 
 

@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Hammer",
+    "quantity": 20,
+    "categories": [
+      "tool"
+    ],
+    "price": 30
+  },
+  {
+    "title": "Drill",
+    "quantity": 21,
+    "categories": [
+      "tool",
+      "powered"
+    ],
+    "price": 299
+  },
+  {
+    "title": "Mower",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "gas",
+      "outdoor"
+    ],
+    "price": 499
+  },
+  {
+    "title": "Hole-Saws",
+    "quantity": 12,
+    "categories": [
+      "tool",
+      "power",
+      "acc's"
+    ],
+    "price": 99
+  },
+  {
+    "title": "Circular-Saw",
+    "quantity": 5,
+    "categories": [
+      "tool",
+      "power"
+    ],
+    "price": 150
+  },
+  {
+    "title": "Screwdrivers",
+    "quantity": 25,
+    "categories": [
+      "tool"
+    ],
+    "price": 39
+  }
+]

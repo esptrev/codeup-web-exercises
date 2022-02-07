@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Store</title>
+</head>
+<body>
+<style>
+
+    tr {
+        text-align: center;
+    }
+</style>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+	<thead>
+        <tr>
+            <th class="col-5 ">Title</th>
+            <th class="col-1">Quantity</th>
+            <th class="col-1">Price</th>
+            <th class="col-5">Categories</th>
+        </tr>
+	</thead>
+	<tbody id="insertProducts"></tbody>
+</table>
+
+<button id="refresh">Refresh Inventory</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+
+        $.ajax("/data/inventory.json")
+            .done(onSuccess)
+            .fail(onFail)
+            .always(stopLoadingAnimation);
+
+        function onSuccess(data, status, jqXhr) {
+            console.log("successful load of information");
+            data.forEach(function (tool) {
+                var toolData = `
+             <thead>
+                <tr>
+                    <td>${tool.title}</td>
+                    <td>${tool.quantity}</td>
+                     <td>${tool.price}</td>
+                    <td>${tool.categories}</td>
+                </tr>
+            </thead>
+
+            `;
+                $('#products').append(toolData);
+            })
+
+        }
+
+        function onFail(jqXhr, status, error) {
+            console.log("page cant get info");
+        }
+
+        function stopLoadingAnimation() {
+            console.log("not sure what goes here");
+        }
+
+
+        $('#refresh').click(function(event){
+            $('table').tbody.html('');
+        })
+
+
+    })
+    ();
+</script>
+
+</body>
+</html>
