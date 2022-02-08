@@ -10,10 +10,45 @@
 </head>
 <body>
 <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .header{
+	    height: 40px;
+	    background-color: #badefc;
+	    text-align: center;
+	    font-size: 24px;
+	    border-radius: 10px;
+	    width: 70%;
+    }
+    body{
+	    background-color: lightgray;
+    }
+
+    .bTitles {
+        display: flex;
+        justify-content: center;
+        background-color: #badefc;
+        color: #4f4c4c;
+    }
+    .footer{
+	    background-color: #badefc;
+	    color: #4f4c4c;
+    }
+    .bConts{
+	    background-color: #bebbbb;
+	    color: #332d2d;
+
+    }
+    .card{
+	    border: #595959 solid 12px;
+	    border-radius: 20px;
+    }
 
 </style>
+<div class="header">Big T's Tasty Treats</div>
 <div id="posts">
-
 
 </div>
 <script>
@@ -22,22 +57,33 @@
         .done(onSuccess)
         .fail(onFail)
         .always(stopLoadingAnimation);
+
     function onSuccess(data, status, jqXhr) {
         console.log("successful load of information");
         data.forEach(function (blog) {
             var blogPosts = `
-					<div class="bTitles col-12">${blog.title}</div>
-					<div class="bConts col-12">${blog.content}</div>
-					<div class="bCats col-6">${blog.categories}</div>
-					<div class="bDates col-6">${blog.date}</div>
+					<div class="card w-60 m-3">
+						<div class="bTitles col-12">${blog.title}</div>
+						<div class="bConts col-12">${blog.content}</div>
+						<div class="footer d-flex justify-content-evenly">
+							<div class="bDates col-6">${blog.date}</div>
+							<div class="bCats col-6">Categories: # ${blog.categories.join(' #')}</div>
+
+						</div>
+					</div>
+</div>
+
 
 `;
             $('#posts').append(blogPosts);
         })
 
+
     }
 
-
+    function capCategories() {
+        console.log(blog.categories);
+    }
 
 
 </script>
