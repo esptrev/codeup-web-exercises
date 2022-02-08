@@ -129,9 +129,38 @@ console.log(breakingRecords(scores));
 // console.log(splitInput("S;M;plasticCup"));
 // console.log(splitInput("C;M;white sheet of paper"));
 
-let input = ("C;M;white sheet of paper");
-let splitArray = input.split();
-console.log(splitArray);
+
+// Remove all ! from string then add one to end
+function remove (string) {
+    let strArr = string.split('')
+    const vToRemove = '!';
+    const results = strArr.filter(function (x){
+        return  x !== vToRemove;
+    })
+    let finished = results.join('') + '!';
+    console.log(finished);
+}
+remove('!!!hi!!');
+
+// Take full name and return just initials
+
+function abbreviate (string){
+    let strRay = string.split('')
+    let initials = []
+    initials.push(strRay[0]);
+    let indSpace = strRay[strRay.indexOf(' ') + 1];
+    initials.push(indSpace);
+    let final = initials.join('');
+    return (final.toUpperCase());
+
+
+
+
+}
+
+abbreviate('trevo esparza')
+
+
 
 
 
