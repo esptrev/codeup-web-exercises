@@ -101,64 +101,90 @@ console.log(breakingRecords(scores));
  first letter of every word capitalized
  */
 
-// function splitInput(input){
-//     if (input.charAt(0) === "S"){
-//         for (let i = 4; i < input.length; i++) {
-//             if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
-//                 let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
-//                 console.log(spacedInput);
+function splitInput(input){
+    if (input.charAt(0) === "S"){
+        for (let i = 4; i < input.length; i++) {
+            if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
+                let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
+                console.log(spacedInput);
+            }
+        }
+
+    }else {
+        let deleted = input.replaceAll(" ","X");
+        for (let i = 0; i < deleted.length; i++) {
+            if(this.charAt(i) === "X"){
+                deleted = deleted.replace(.charAt(i + 1). )
+            }
+        }
+
+            }
+
+
+
+
+    }
+
+
+console.log(splitInput("S;M;plasticCup"));
+console.log(splitInput("C;M;white sheet of paper"));
+
+// function splitInput(string){
+//     let split = string.split(';')
+//     console.log(split)
+//     let actualString = split[2].toString()
+//     console.log(actualString)
+//     if (split[0] === 'S'){
+//         let letterIndex = []
+//         actualString.split('').forEach(function (letter, i){
+//             if(letter === letter.toUpperCase()) {
+//                 letterIndex.push(i)
 //             }
-//         }
-//
-//     }else {
-//         let deleted = input.replaceAll(" ","X");
-//         for (let i = 0; i < deleted.length; i++) {
-//             if(this.charAt(i) === "X"){
-//                 deleted = deleted.replace(.charAt(i + 1). )
-//             }
-//         }
-//
-//             }
-//
-//
-//
-//
+//         })
+//         console.log(letterIndex)
 //     }
 //
-//
-// console.log(splitInput("S;M;plasticCup"));
-// console.log(splitInput("C;M;white sheet of paper"));
+// }
+// splitInput('S;M;plasticCup') Raymonds stab at it try to expand
+
+
+
+
+
+
+
+
 
 
 // Remove all ! from string then add one to end
-function remove (string) {
-    let strArr = string.split('')
-    const vToRemove = '!';
-    const results = strArr.filter(function (x){
-        return  x !== vToRemove;
-    })
-    let finished = results.join('') + '!';
-    console.log(finished);
-}
-remove('!!!hi!!');
+// function remove (string) {
+//     let strArr = string.split('')
+//     const vToRemove = '!';
+//     const results = strArr.filter(function (x){
+//         return  x !== vToRemove;
+//     })
+//     let finished = results.join('') + '!';
+//     console.log(finished);
+// }
+// remove('!!!hi!!');
+//
+// // Take full name and return just initials
+//
+// function abbreviate (string){
+//     let strRay = string.split('')
+//     let initials = []
+//     initials.push(strRay[0]);
+//     let indSpace = strRay[strRay.indexOf(' ') + 1];
+//     initials.push(indSpace);
+//     let final = initials.join('');
+//     return (final.toUpperCase());
+//
 
-// Take full name and return just initials
-
-function abbreviate (string){
-    let strRay = string.split('')
-    let initials = []
-    initials.push(strRay[0]);
-    let indSpace = strRay[strRay.indexOf(' ') + 1];
-    initials.push(indSpace);
-    let final = initials.join('');
-    return (final.toUpperCase());
 
 
-
-
-}
-
-abbreviate('trevo esparza')
+// }
+//
+// abbreviate('trevo esparza')
 
 
 
