@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>External JS</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="js/browsertest.js"></script>
 </head>
 <body>
@@ -29,6 +31,17 @@
         // Remove an attribute
         searchLink.removeAttribute("class"); // Remove the class attribute
     })();
+
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: OPEN_WEATHER_APPID,
+        lat:    29.423017,
+        lon:   -98.48527,
+        units: "imperial"
+    }).done(function(data) {
+        console.log('5 day forecast', data);
+    });
+
 </script>
 
 

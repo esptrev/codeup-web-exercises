@@ -101,33 +101,27 @@ console.log(breakingRecords(scores));
  first letter of every word capitalized
  */
 
-function splitInput(input){
-    if (input.charAt(0) === "S"){
-        for (let i = 4; i < input.length; i++) {
-            if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
-                let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
-                console.log(spacedInput);
-            }
-        }
-
-    }else {
-        let deleted = input.replaceAll(" ","X");
-        for (let i = 0; i < deleted.length; i++) {
-            if(this.charAt(i) === "X"){
-                deleted = deleted.replace(.charAt(i + 1). )
-            }
-        }
-
-            }
-
-
-
-
-    }
-
-
-console.log(splitInput("S;M;plasticCup"));
-console.log(splitInput("C;M;white sheet of paper"));
+// function splitInput(input){
+//     if (input.charAt(0) === "S"){
+//         for (let i = 4; i < input.length; i++) {
+//             if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
+//                 let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
+//                 console.log(spacedInput);
+//             }
+//         }
+//
+//     }else {
+//         let deleted = input.replaceAll(" ","X");
+//         for (let i = 0; i < deleted.length; i++) {
+//             if(this.charAt(i) === "X"){
+//             }
+//         }
+//             }
+//     }
+//
+//
+// console.log(splitInput("S;M;plasticCup"));
+// console.log(splitInput("C;M;white sheet of paper"));
 
 // function splitInput(string){
 //     let split = string.split(';')
@@ -268,3 +262,46 @@ function solution(number){
 }
 
 console.log(solution(15));
+
+//given two arrays, merge and find the median for the merged array
+
+let firstArray = [1,3,5,7,9,11,13];
+let secondArray = [2,4,6,8,10,12,14];
+
+function findMergedMedian(inputA, inputB){
+    for (let i = 0; i < inputA.length; i++) {
+        secondArray.push(inputA[i]);
+    }
+    let sortedArray = secondArray.sort((a,b) => a - b);
+    const middle = Math.floor(sortedArray.length / 2);
+    if(sortedArray.length % 2 === 0){
+        return((sortedArray[middle - 1] + sortedArray[middle]) / 2);
+    }
+    return sortedArray[middle];
+}
+console.log(findMergedMedian(firstArray,secondArray));
+
+// does first string contain all the letters of the second string
+
+function isItThere(inputA,inputB){
+    for (let i = 0; i < inputA.length; i++) {
+        if (inputB.indexOf(inputA[i]) <= -1) return false;
+    }
+    for (let i = 0; i < inputB.length; i++) {
+        if (inputA.indexOf(inputB[i]) <= -1) return false;
+    }
+    return true;
+}
+
+console.log(isItThere('trlevlor','rovert'))
+
+// var s1 = 'cedewaraaossoqqyt';
+// var s2 = 'shine';
+// var count=0;
+// function match(s1,s2)
+// {
+//     for(let i in s1)
+//         s2.includes(s1[i])?count++:false;
+//     console.log(count)
+// }
+// match(s1,s2)
