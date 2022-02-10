@@ -157,39 +157,32 @@ console.log(splitInput("C;M;white sheet of paper"));
 
 
 // Remove all ! from string then add one to end
-// function remove (string) {
-//     let strArr = string.split('')
-//     const vToRemove = '!';
-//     const results = strArr.filter(function (x){
-//         return  x !== vToRemove;
-//     })
-//     let finished = results.join('') + '!';
-//     console.log(finished);
-// }
-// remove('!!!hi!!');
-//
-// // Take full name and return just initials
-//
-// function abbreviate (string){
-//     let strRay = string.split('')
-//     let initials = []
-//     initials.push(strRay[0]);
-//     let indSpace = strRay[strRay.indexOf(' ') + 1];
-//     initials.push(indSpace);
-//     let final = initials.join('');
-//     return (final.toUpperCase());
-//
+function remove (string) {
+    let strArr = string.split('')
+    const vToRemove = '!';
+    const results = strArr.filter(function (x){
+        return  x !== vToRemove;
+    })
+    let finished = results.join('') + '!';
+    console.log(finished);
+}
+remove('!!!hi!!');
 
+// Take full name and return just initials
 
+function abbreviate (string){
+    let strRay = string.split('')
+    let initials = []
+    initials.push(strRay[0]);
+    let indSpace = strRay[strRay.indexOf(' ') + 1];
+    initials.push(indSpace);
+    let final = initials.join('');
+    return (final.toUpperCase());
 
-// }
-//
-// abbreviate('trevo esparza')
+}
+abbreviate('trevo esparza')
 
-
-
-
-
+//Function to return Boolean if number is prime
 function isPrime(num){
     if(num < 2){
         return false;
@@ -201,3 +194,77 @@ function isPrime(num){
         return false;
     }
 }
+
+
+
+
+
+
+// Function loneRanger, remove the element that occurs only once in the array
+let array = [12,1,12,3,12,1,1,2,3,3];
+function loneRanger(input){
+    for (let i = 0; i < input.length; i++) {
+        if(input.indexOf(input[i]) === input.lastIndexOf(input[i])){
+            return input[i];
+        }
+
+    }
+}
+console.log(loneRanger(array));
+
+
+
+// Find integers divisors
+function divisors(integer) {
+    let divArr = [];
+    for(let i = 2; i < integer; i++){
+        if(integer % i === 0){
+            divArr.push(i);
+        }
+
+    }
+    if(divArr.length === 0){
+        return integer + " is prime";
+    }
+    return divArr;
+}
+console.log(divisors(15));    /*   [3, 5]  */
+console.log(divisors(12));      /* [2, 3, 4, 6]*/
+console.log(divisors(13));     /*  ( "13 is prime")*/
+
+//Remove the last !
+function remove (string) {
+    if(string.charAt(string.length -1) === '!'){
+        return string.slice(0,-1);
+    }
+    return string;
+}
+console.log(remove("Hi!"));
+console.log(remove("Hi!!!"));
+console.log(remove("!Hi!"));
+console.log(remove("Hi"));
+console.log(remove("Hi! Hi!"));
+console.log(remove("!Hi"));
+
+// doTest("Hi!!!", "Hi!!");
+// doTest("!Hi", "!Hi");
+// doTest("!Hi!", "!Hi");
+// doTest("Hi! Hi!", "Hi! Hi");
+// doTest("Hi", "Hi");
+
+//Find sum of divisors 3/5
+function solution(number){
+    let sumOfDivisors = 0;
+    if(number < 0){
+        return 0;
+    }else{
+        for(i=3;i<number;i++){
+            if(i % 3 === 0 || i % 5 === 0){
+                sumOfDivisors += i;
+            }
+        }
+        return sumOfDivisors;
+    }
+}
+
+console.log(solution(15));

@@ -19,19 +19,22 @@
         })
     );
 
-    function geocode(search, token) {
-        var baseUrl = 'https://api.mapbox.com';
-        var endPoint = '/geocoding/v5/mapbox.places/';
-        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
-            .then(function(res) {
-                return res.json();
-                // to get all the data from the request, comment out the following three lines...
-            }).then(function(data) {
-                return data.features[0].center;
-            });
-    }
-
-
+    // function geocode(search, token) {
+    //     var baseUrl = 'https://api.mapbox.com';
+    //     var endPoint = '/geocoding/v5/mapbox.places/';
+    //     $.ajax.get(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+    //         .done(function(data,status,jqXhr){
+    //             console.log(data);
+    //         })
+    // }
+    // return data.features[0].center
+    // function reverseGeocode(coordinates, token) {
+    //     var endPoint = '/geocoding/v5/mapbox.places/';
+    //     $.ajax.get(endPoint + coordinates.lng + ',' + coordinates.lat + '.json' + "?" + 'access_token=' + token,{
+    //     }).done(function(data,status,jqXhr){
+    //         console.log(data);
+    //     });
+    // }
     function reverseGeocode(coordinates, token) {
         var baseUrl = 'https://api.mapbox.com';
         var endPoint = '/geocoding/v5/mapbox.places/';
@@ -44,7 +47,7 @@
                 return data.features[0].place_name;
             });
     }
-    reverseGeocode({lat: 32.716, lng: 117.161})
+    reverseGeocode([39.73,-104.99], mapToken)
 
 
 
@@ -59,8 +62,6 @@
             .addTo(map);
         const lngLat = marker.getLngLat();
         console.log(`Longitude: ${lngLat.lng}, Latitude: ${lngLat.lat}`);
-
-
     }
 
 
