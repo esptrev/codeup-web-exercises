@@ -92,63 +92,6 @@ function breakingRecords(scores) {
 }
 console.log(breakingRecords(scores));
 
-/* mission: split or combine strings base one first/second characters of string
- S = split, C = combine  second code  M = method , V = variable, C = class
- in the case of split operation the input will be camelCased and need to be split into
- space delimited list of words all lower cased
- in the combine operation inputs will be a space delimited set of words all lower cased that must be combined
- into appropriate camelCased string. Strings with M need to end with empty parenthesis strings with C need to have
- first letter of every word capitalized
- */
-
-// function splitInput(input){
-//     if (input.charAt(0) === "S"){
-//         for (let i = 4; i < input.length; i++) {
-//             if(input.charAt(i)  === input.charAt(i).toUpperCase()) {
-//                 let spacedInput = (input.replace(input.charAt(i), " " + input.charAt(i))).toLowerCase();
-//                 console.log(spacedInput);
-//             }
-//         }
-//
-//     }else {
-//         let deleted = input.replaceAll(" ","X");
-//         for (let i = 0; i < deleted.length; i++) {
-//             if(this.charAt(i) === "X"){
-//             }
-//         }
-//             }
-//     }
-//
-//
-// console.log(splitInput("S;M;plasticCup"));
-// console.log(splitInput("C;M;white sheet of paper"));
-
-// function splitInput(string){
-//     let split = string.split(';')
-//     console.log(split)
-//     let actualString = split[2].toString()
-//     console.log(actualString)
-//     if (split[0] === 'S'){
-//         let letterIndex = []
-//         actualString.split('').forEach(function (letter, i){
-//             if(letter === letter.toUpperCase()) {
-//                 letterIndex.push(i)
-//             }
-//         })
-//         console.log(letterIndex)
-//     }
-//
-// }
-// splitInput('S;M;plasticCup') Raymonds stab at it try to expand
-
-
-
-
-
-
-
-
-
 
 // Remove all ! from string then add one to end
 function remove (string) {
@@ -282,7 +225,7 @@ function findMergedMedian(inputA, inputB){
 console.log(findMergedMedian(firstArray,secondArray));
 
 // does first string contain all the letters of the second string
-
+// this one doesn't work
 function isItThere(inputA,inputB){
     for (let i = 0; i < inputA.length; i++) {
         if (inputB.indexOf(inputA[i]) <= -1) return false;
@@ -292,16 +235,21 @@ function isItThere(inputA,inputB){
     }
     return true;
 }
-
 console.log(isItThere('trlevlor','rovert'))
 
-// var s1 = 'cedewaraaossoqqyt';
-// var s2 = 'shine';
-// var count=0;
-// function match(s1,s2)
-// {
-//     for(let i in s1)
-//         s2.includes(s1[i])?count++:false;
-//     console.log(count)
-// }
-// match(s1,s2)
+// iterate through the array adding every index to every index and then divide by k
+function divisibleSumPairs(n,k,array) {
+    var counter = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            console.log(array[i]);
+            let sum = array[i] + array[j];
+            console.log(array[j]);
+            if(sum % k === 0){
+                counter++
+            }
+        }
+    }
+    return (counter);
+}
+divisibleSumPairs(5,3,[1,2,3,4,5]);

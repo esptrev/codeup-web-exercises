@@ -202,7 +202,7 @@ console.log(starter, mainCourse);
 // Nested destructuring
 const nested = [2, 4, [5, 6]];
 // const [i, , j] = nested;
-const [i, , [j, k]] = nested;
+let [i, , [j, k]] = nested;
 console.log(i, j, k);
 
 // Default values
