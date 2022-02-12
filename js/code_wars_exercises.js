@@ -253,3 +253,26 @@ function divisibleSumPairs(n,k,array) {
     return (counter);
 }
 divisibleSumPairs(5,3,[1,2,3,4,5]);
+
+//////////// converting milliseconds to day/time  ////////////////
+
+// let milliseconds = 1644676477;
+
+// let convertedTime = Date(milliseconds);
+// console.log(convertedTime);
+// let convertedTimeArray = (convertedTime.split(' '));
+// console.log(convertedTimeArray);
+// let dayOfWeek = convertedTimeArray[0];
+// console.log(dayOfWeek);
+// let militaryTime = convertedTimeArray[4];
+// console.log(militaryTime);
+
+let convertedTime = new Date();
+console.log(convertedTime);
+let hours = convertedTime.getHours();
+console.log(hours)
+
+let milliseconds = 1644676477;
+
+let sampleTime = Date(milliseconds);
+console.log(sampleTime);

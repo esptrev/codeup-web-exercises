@@ -103,6 +103,9 @@
         $('#pressure').html(`${atmosPressure}`);
 
         let dawnDay = data.daily[1].sunrise;
+
+        console.log(`i'm looking for this ${Date(dawnDay)}`);
+        console.log(Date(data.current.dt));
         let duskDay = data.daily[1].sunset;
         $('#sun').html(`${dawnDay}, ${duskDay}`);
     }
