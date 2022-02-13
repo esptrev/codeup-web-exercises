@@ -276,3 +276,25 @@ let milliseconds = 1644676477;
 
 let sampleTime = Date(milliseconds);
 console.log(sampleTime);
+
+
+/////////// Given a number array move all zeroes to end of array  ////////////////
+
+let originalArray = [0,1,0,2,0,3,0,4,0,5];
+
+originalArray.forEach(function (num){
+    if(num === 0){
+        originalArray.push(originalArray.splice(originalArray.indexOf(0), 1)[0]);
+    }
+    console.log(originalArray);
+})
+
+
+
+
+
+
+
+
+
+
