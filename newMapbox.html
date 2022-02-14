@@ -55,11 +55,9 @@
             address: '22106 U.S. Hwy 281 N, San Antonio, TX 78258',
             position: [-98.45010, 29.64712],
             card:{
-
-                photo:`` ,
-                website:'www.chipotle.com' ,
-                phone: ,
-
+                photo: `<a href= 'https://placeholder.com>'><img src="https://via.placeholder.com/30" alt="stock photo"></a>`,
+                website:`<a href= 'https://chipotle.com'>Menu</a>`,
+                phone: `123-456-7890`,
             }
         },
         {
@@ -67,22 +65,19 @@
             address: `19186 Blanco Rd, San Antonio, TX 78258`,
             position: [-98.51231, 29.62114],
             card:{
-                photo: ,
-                website: `www.koreanbbqsa.com`,
-                phone: ,
-
+                photo: `<a href= 'https://placeholder.com>'><img src="https://via.placeholder.com/30" alt="stock photo"></a>`,
+                website:`<a href= 'https://koreanbbqsa.com'>Menu</a>`,
+                phone: `123-456-7890`,
             }
-
-
         },
         {
             name: `The Branch`,
             address: `17130 TX-46, Spring Branch, TX 78070`,
             position: [-98.37938, 29.80446],
 	        card:{
-                photo: ,
-		        website:`www.thebranchsbtx.com`,
-		        phone: ,
+                photo: `<a href= 'https://placeholder.com>'><img src="https://via.placeholder.com/30" alt="stock photo"></a>`,
+		        website:`<a href= 'https://thebranchsbtx.com'>Menu</a>`,
+		        phone: `123-456-7890`,
 
 	        }
         }
@@ -134,14 +129,22 @@
         geocode(restaurant.address, TREVORS_MAP_TOKEN)
 	        .then(function(restCoords){
                 console.log(restCoords)
-                createMarker(restCoords,restaurant.website)
+                createMarker(restCoords, createPopCardInfo(restaurant));
 	        })
     })
 
-    function createPopCardInfo(eatsHTML){
+    function createPopCardInfo(restaurant){
+        console.log(restaurant);
+        var restCard = `
+        <tr>
+            <td">${restaurant.card.photo}</td>
+            <td">${restaurant.card.website}</td>
+            <td">${restaurant.card.phone}</td>
 
+        </tr>
+`;
 
-
+        return restCard;
     }
 
 
