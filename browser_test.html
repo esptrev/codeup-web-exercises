@@ -1,86 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>External JS</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="js/browsertest.js"></script>
+	<meta charset="utf-8">
+	<title>eq demo</title>
+	<style>
+        div {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            float: left;
+            border: 2px solid blue;
+        }
+        .blue {
+            background: blue;
+        }
+	</style>
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
-<!--<a href="http://www.yahoo.com" id="search-link">Web Search</a>-->
+<div class="change box"></div>
+<div>box 0</div>
+<div>box 1</div>
+<div>box 2</div>
+<div>box 3</div>
+<div>box 4</div>
+<div>box 5</div>
+<div class="change box"></div>
+
+
 <script>
-    "use strict";
-    // (function() {
-    //     // Get the search link anchor by id
-    //     var searchLink = document.getElementById("search-link");
-    //
-    //     // Does an element have an attribute?
-    //     console.log(searchLink.hasAttribute("href")); // Prints true
-    //     console.log(searchLink.hasAttribute("class")); // Prints false
-    //
-    //     // Get an attribute value
-    //     console.log(searchLink.getAttribute("href")); // Prints "http://www.yahoo.com"
-    //
-    //     // Add or modify an attribute
-    //     searchLink.setAttribute("class", "btn btn-default");
-    //     // Adds the attribute class and sets it to "btn btn-default"
-    //
-    //     searchLink.setAttribute("href", "http://google.com");
-    //     // Changes the href attribute to "http://google.com"
-    //
-    //     // Remove an attribute
-    //     searchLink.removeAttribute("class"); // Remove the class attribute
-    // })();
-    //
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-    //     APPID: OPEN_WEATHER_APPID,
-    //     lat:    29.423017,
-    //     lon:   -98.48527,
-    //     units: "imperial"
-    // }).done(function(data) {
-    //     console.log('5 day forecast', data);
-    // });
-    'use strict';
-
-    // this code will produce a console log every second
-    // when count >= max, the interval is cancelled, and the logging will stop
-
-    var count = 0;
-    var max = 10;
-    var interval = 1000; // interval time in milliseconds
-
-    var intervalId = setInterval(function () {
-        if (count >= max) {
-            clearInterval(intervalId);
-            console.log('All done');
-        } else {
-            count++;
-            console.log('Repeating this line ' + count);
-        }
-    }, interval);
-
-
-
-
-
+    $( "body" ).find( "div" ).eq( 5).addClass( "blue" );
+    $('.change').css('background-color', 'red');
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>

@@ -68,6 +68,7 @@
     /* POPUP AND ATTACHMENT TO COORDS */
 
     function makePopUpForCoords(coords) {
+        console.log(coords);
         /* coords from MAPBOX are an object, need to convert to array */
         const coordArray = [coords.lng, coords.lat];
         const popup = new mapboxgl.Popup({closeOnClick: false})
