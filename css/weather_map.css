@@ -29,12 +29,42 @@ body{
 }
 #cardStack{
     display: flex;
+    background-color: gray;
 }
 #dayOfWeek{
     display: flex;
+    border-radius: 4px;
+    margin: 2px;
 }
 #cardBody{
-
+    margin: 6px;
+    border: #332d2d solid 2px;
+    background-color: #d9d7d7;
+    border-radius: 10px;
+}
+#highLow{
+    border-radius: 2px;
+    margin: 2px
+}
+#icon{
+    border-radius: 2px;
+    margin: 2px
+}
+#forecast{
+    border-radius: 2px;
+    margin: 2px
+}
+#wind{
+    border-radius: 2px;
+    margin: 2px
+}
+#pressure{
+    border-radius: 2px;
+    margin: 2px
+}
+#sun{
+    border-radius: 2px;
+    margin: 2px
 }
 .footer{
     background-color: lightgray;

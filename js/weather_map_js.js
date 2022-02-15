@@ -6,6 +6,7 @@
     const STARTING_COORDS = [-98.4936, 29.4241];
     const weatherURL = `http://api.openweathermap.org/data/2.5/onecall`;
     let dailyWeatherInfo = [];
+    let compassHeading;
 
     var weatherOptions = {
         lat: 29.4241, /* i want coords to feed from map center */
@@ -44,6 +45,7 @@
             marker: false,
         })
     );
+
     var marker = new mapboxgl.Marker({
         draggable: true
     })
@@ -84,7 +86,7 @@
             console.log(data);
             dailyWeatherInfo = data.daily;
             console.log(dailyWeatherInfo);
-            convertWeatherData(dailyWeatherInfo);
+            // convertWeatherData(dailyWeatherInfo);
             dailyWeatherUpdates(dailyWeatherInfo);
 
         })
@@ -101,20 +103,38 @@
 
     }
 
+    function degToCompass(num) {
+        var val = Math.floor((num / 22.5) + 0.5);
+        compassHeading = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+        return compassHeading[(val % 16)];
+    }
 
     function createDailyForecastHTML(singleDay) {
-
+        var myDate = new Date(singleDay.dt * 1000).toString();
+        var dayOfWeek = (myDate.slice(0,3));
+        var parsedHighTemp = (parseInt(singleDay.temp.max));
+        var parsedLowTemp = (parseInt(singleDay.temp.min));
+        var windSpeed = (parseInt(singleDay.wind_speed));
+        var windHeading = singleDay.wind_deg;
+        var weatherIcon = `<img  src='http://openweathermap.org/img/wn/${singleDay.weather[0].icon}@2x.png' alt={cccc}>`
+        // degToCompass(windHeading);
+        var sunsetTime = new Date(singleDay.sunset * 1000).toString();
+        var sunSet = sunsetTime.slice(16,21);
+        var sunriseTime = new Date(singleDay.sunrise * 1000).toString();
+        var sunRise = sunriseTime.slice(16,21);
+        var inchesOfMercury = (singleDay.pressure * 0.0295301).toFixed(2);
         // language = HTML
         var html = `
-			<div class="col-4">
-				<div id="dayOfWeek" class="card-body">${singleDay.dt}</div>
+			<div class="col-3">
+				
 				<div id="cardBody" class="card-body">
-					<div id="highLow">H:${singleDay.temp.max} / L:${singleDay.temp.min}</div>
-					<div id="icon">${singleDay.weather[0].icon}</div>
+				    <div id="dayOfWeek" class="card-body">${dayOfWeek}</div>
+					<div id="highLow">H:${parsedHighTemp}°F / L:${parsedLowTemp}°F</div>
+					<div id="icon">${weatherIcon}</div>
 					<div id="forecast">${singleDay.weather[0].description}</div>
-					<div id="wind">${singleDay.wind_speed} / ${singleDay.wind_deg}</div>
-					<div id="pressure">${singleDay.pressure}</div>
-					<div id="sun">${singleDay.sunrise}/${singleDay.sunset}</div>
+					<div id="wind">${windSpeed} mph / ${degToCompass(windHeading)}</div>
+					<div id="pressure">${inchesOfMercury}" inHg</div>
+					<div id="sun">${sunRise}/${sunSet}</div>
 				</div>
 			</div>`
 
@@ -125,114 +145,23 @@
 
 
 
-//// delete my appendweather function///////
-
-    function convertWeatherData(days) {
-        let dayOfWeek = (days.temp);
-        console.log(dayOfWeek)
-
-    }
 
 
 
 
 
-
-        // let utcConversion = days[0].dt
-        // const myDate = new Date(1644516000 * 1000);
-        // console.log(myDate);
-//         const dayOfWeek = getDayOfWeek(myDate.getDay());
-//         console.log(myDate.toString().substr(0, 3));
-//         console.log(setTime('America/Chicago'))
-
-        // const myDate = new Date(data.daily[0].dt);
-        // console.log(days[0].temp.max);
-
-    //     let dayOfWeek = ((data.daily.dt) * 1000);  /* need to convert */
-    //  //   $('#dayOfWeek').html(`${dayOfWeek}`);
-    //
-    //     let highTemp = data.daily[1].temp.max;  /* need to round */
-    //     let lowTemp = data.daily[1].temp.min;
-    //   //  $('#highLow').html(`H: ${highTemp}, L:${lowTemp}`);
-    //
-    //     let icon = data.daily[1].weather[0].icon;  /* need to convert # to jpeg */
-    //  //   $('#icon').html(`${icon}`);
-    //
-    //     let forecast = data.daily[1].weather[0].description;
-    //  //   $('#forecast').html(`${forecast}`);
-    //
-    //     let windSpeed = data.daily[1].wind_speed;
-    //     let windDirection = data.daily[1].wind_deg;
-    //  //   $('#wind').html(`${windSpeed}:${windDirection}`);
-    //
-    //     let atmosPressure = data.daily[1].pressure;
-    // //    $('#pressure').html(`${atmosPressure}`);
-    //
-    //     let dawnDay = data.daily[1].sunrise;
-    //
-    //     console.log(`i'm looking for this ${Date(dawnDay)}`);
-    //     console.log(Date(data.current.dt));
-    //     let duskDay = data.daily[1].sunset;
-    //    $('#sun').html(`${dawnDay}, ${duskDay}`);
-
-        // ////////USE THIS FUNCTION TO CONVERT DEGREES TO HEADING///////////
-        // function degToCompass(num) {
-        //     var val = Math.floor((num / 22.5) + 0.5);
-        //     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-        //     return arr[(val % 16)];
-        // }
-
-        ////////////USE TO CONVERT MILLIBARS TO INCHES MERCURY//////////////
-    ////////    To convert millibars to inches of mercury, millibar * 0.0295301./////////
-
-
-
-
-    function onSuccessfulLoad(data) {
-        console.log('The entire response:', data);
-        console.log('Diving in - here is current information: ', data.current);
-        console.log('A step further - information for tomorrow: ', data.daily[1]);
-
-
-    }
 
 
 })();
 
-// (function() {
-//     const OPENWEATHER_KEY = 'c44633dab287ad6aa0232cce2b4a4815';
-//
-//     function getDayOfWeek(dayNumber) {
-//         if(dayNumber === 4) {
-//             return "Thu";
-//         } else {
-//             return "Unknown";
-//         }
-//     }
-//
-//     function setTime(timeZ) {
-//         return new Intl.DateTimeFormat(navigator.language, {
-//             timeZone: timeZ,
-//             year: 'numeric',
-//             month: 'numeric',
-//             day: 'numeric',
-//             hour: 'numeric',
-//             minute: 'numeric'
-//         }).format(new Date());
-//     }
-//
-//     $(document).ready(function() {
-//
-//         $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&exclude=hourly,minutely&appid=${OPENWEATHER_KEY}&units=imperial`)
-//             .done(function (data) {
-//                 console.log(data);
-//             });
-//
-//         // const dateMS = ;
-//         const myDate = new Date(1644516000 * 1000);
-//         const dayOfWeek = getDayOfWeek(myDate.getDay());
-//         console.log(myDate.toString().substr(0, 3));
-//         console.log(setTime('America/Chicago'))
-//     });
-//
-// })();
+
+// ////////USE THIS FUNCTION TO CONVERT DEGREES TO HEADING///////////
+// function degToCompass(num) {
+//     var val = Math.floor((num / 22.5) + 0.5);
+//     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+//     return arr[(val % 16)];
+// }
+
+function onSuccessfulLoad(data) {
+
+}
