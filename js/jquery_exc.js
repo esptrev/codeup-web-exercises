@@ -29,6 +29,7 @@
     let firstULContents = $('#firstUL').html();
     // alert(firstULContents);
 
+
     let contentsFirstDiv = $('#firstDiv').html();
     // alert(contentsFirstDiv);
 
@@ -83,6 +84,17 @@
             $(this).css('color', 'black');
         }
     );
+
+     $('#codeup').click(function (event) {
+         $(this).html('Bye Bye Codeup')
+     })
+
+//    Toggle 'button' for hiding/showing different html//
+// toggle text of h1 line 9 of html  primary/seocndary///
+    $('#toggleButton').click(function (){
+        $('.toggleHeader').toggle();
+    });
+
 
 
 })(); /* close IIFE */
