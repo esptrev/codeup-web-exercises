@@ -266,9 +266,7 @@
 //     console.log(originalArray);
 // })
 //
-const fruits = ['apple', 'banana', 'orange'];
-fruits.push('pear');
-console.log(fruits);
+
 
 
 
