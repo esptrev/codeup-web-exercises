@@ -54,8 +54,7 @@ console.log(multiLingual2,'filterfunction');
 
 /////email array with map/////
 let multiLingual0 = users.map(user => user.email);
- console.log('herehere')
-console.log(multiLingual0);
+console.log(multiLingual0, 'herehere');
 
 ////sum of total years experience with reduce/////
 let yearsOfExperience = users.reduce((totalYearsOfExperience, user) =>{

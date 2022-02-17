@@ -18,10 +18,8 @@ fetch('https://api.github.com/users/esptrev/repos',{headers: {'Authorization': T
         console.log(data)
     })
 
-    // .then(users => {
-    //     users.forEach( userObj => {
-    //         // do something with each username
-    //         console.log(userObj.login);
-    //     })
-    // })
-    // .catch(error => console.error(error));
+fetch("https://api.github.com/users/esptrev/repos/codeup-web-exercises/commits",{headers: {'Authorization': TREVOR_GITHUB_TOKEN}})
+    .then(response => response.json())
+    .then(function (data){
+        console.log(data);
+    })
