@@ -270,4 +270,29 @@
 
 
 
+// const isDivisibleBy3 = n => n % 3 === 0;
+//
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//
+// console.log(numbers.filter(isDivisibleBy3));
+// console.log(numbers);
+//
+// if (true) {
+//     let x = 5;
+// }
+// console.log(typeof x);
 
+// function sayHello(name) {
+//     return 'Hello, ' + name + '!';
+// }
+
+// console.log(sayHello('trevor'));
+
+const house = {
+    bedrooms: 2,
+    bathrooms: 2,
+    sqft: 1234
+}
+for (prop in house){
+    console.log(prop,house[prop]);
+}
