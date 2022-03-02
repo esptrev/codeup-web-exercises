@@ -296,3 +296,37 @@ const house = {
 for (prop in house){
     console.log(prop,house[prop]);
 }
+
+let numb = 123;
+console.log(numb.toString().split('').reverse().join(''));
+
+
+
+function countDuplicates (string){
+    const duplicates = {};
+    let splitDuplicates = string.split('');
+    console.log(splitDuplicates);
+    splitDuplicates.forEach((char) => {
+        duplicates[char] = (duplicates [char] || 0) + 1;
+    });
+    console.log(duplicates);
+}
+countDuplicates("adsjfdsfsfjsdjfhacabcsbajda")
+
+function countWords(sentence) {
+    const words = sentence.split(' '); // transform a sentence into an array of words
+    const wordCountObject = words.reduce((wordCounts, word) => {
+        if (typeof wordCounts[word] === 'undefined') {
+            // if the word is not yet present in our object, set it's value to 1
+            wordCounts[word] = 1;
+        } else {
+            // otherwise increment the existing count
+            wordCounts[word] += 1;
+        }
+        return wordCounts;
+    }, {}); // start with an empty object
+    return wordCountObject;
+}
+
+countWords('Mary had a little lamb little lamb little lamb');
+// {Mary: 1, had: 1, a: 1, little: 3, lamb: 3}
