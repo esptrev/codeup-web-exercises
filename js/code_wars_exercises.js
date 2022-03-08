@@ -330,3 +330,29 @@ function countWords(sentence) {
 
 countWords('Mary had a little lamb little lamb little lamb');
 // {Mary: 1, had: 1, a: 1, little: 3, lamb: 3}
+
+// Write a function called makePerson. It takes 2 arguments: personName and age.
+//     personName must be at least 1 character long. age must be between 1 and 150.
+// If either of the parameters is invalid, output an appropriate message to the console and return FALSE.
+//     If both parameters are valid, return an object containing personName and age.
+//     E.g.,
+//     console.log(makePerson("Bob", 30)); // outputs {personName:"Bob", age:30}
+// console.log(makePerson("", 30));
+// // outputs:
+// Person name cannot be blank
+// false
+
+function makePerson (pName,pAge){
+    if(pName.length === 0){
+        console.log("Name cannot be empty");
+        return false;
+    }
+    if(pAge < 1 || pAge > 150){
+        console.log("Not a valid age")
+        return false;
+    }
+    return {pName,pAge};
+}
+
+console.log(makePerson('trevor', 45));
+
