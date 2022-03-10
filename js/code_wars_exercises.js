@@ -342,6 +342,8 @@ countWords('Mary had a little lamb little lamb little lamb');
 // Person name cannot be blank
 // false
 
+
+/// LITTLE JS WARMUP FROM DOC ROB ///
 function makePerson (pName,pAge){
     if(pName.length === 0){
         console.log("Name cannot be empty");
@@ -356,3 +358,8 @@ function makePerson (pName,pAge){
 
 console.log(makePerson('trevor', 45));
 
+/// Little function from LinkedIn ///  What logs first start or end ///
+setTimeout(function (){
+    console.log("start")
+},0);
+console.log("end");
