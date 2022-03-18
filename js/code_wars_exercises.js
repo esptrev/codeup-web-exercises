@@ -363,3 +363,48 @@ setTimeout(function (){
     console.log("start")
 },0);
 console.log("end");
+
+//// COUPLE MERGE FUNCTIONS FROM LINKEDIN ////
+
+let numArray = [12,25,65,34,98,100,1,4,8,200,222,21,77];
+function sortArray (array){
+    console.log(numArray);
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if(array[j] > array[j + 1]){
+                let temp = array[j+1];
+                array[j+1] = array[j];
+                array[j] = temp;
+            }
+
+        }
+
+    }
+    return numArray;
+}
+
+console.log(sortArray(numArray));
+
+const merge = (arr1, arr2) => {
+    let sorted = [];
+
+    while (arr1.length && arr2.length) {
+        if (arr1[0] < arr2[0]) sorted.push(arr1.shift());
+        else sorted.push(arr2.shift());
+    };
+
+    return sorted.concat(arr1.slice().concat(arr2.slice()));
+};
+
+
+const mergeSort = arr => {
+    if (arr.length <= 1) return arr;
+    let mid = Math.floor(arr.length / 2),
+        left = mergeSort(arr.slice(0, mid)),
+        right = mergeSort(arr.slice(mid));
+
+    return merge(left, right);
+};
+const unsortedArr = [31, 27, 28, 42, 13, 8, 11, 30,51,52,53,54, 17, 41, 15, 43, 1, 36, 9, 16, 20, 35, 48, 37, 7, 26, 34, 21, 22, 6, 29, 32, 49, 10, 12, 19, 24, 38, 5, 14, 44, 40, 3, 50, 46, 25, 18, 33, 47, 4, 45, 39, 23, 2];
+console.log(mergeSort(unsortedArr));
+
