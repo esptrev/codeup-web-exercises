@@ -408,3 +408,15 @@ const mergeSort = arr => {
 const unsortedArr = [31, 27, 28, 42, 13, 8, 11, 30,51,52,53,54, 17, 41, 15, 43, 1, 36, 9, 16, 20, 35, 48, 37, 7, 26, 34, 21, 22, 6, 29, 32, 49, 10, 12, 19, 24, 38, 5, 14, 44, 40, 3, 50, 46, 25, 18, 33, 47, 4, 45, 39, 23, 2];
 console.log(mergeSort(unsortedArr));
 
+const greeting = "      Happy     Tuesday    !    ";
+console.log(greeting.trim());
+
+
+console.log([1,2,3,4,5].fill(0,1,3));
+
+console.log(parseFloat(7.5/10));
+
+
+console.log("trevor")
+console.log([] == ![]);
+
