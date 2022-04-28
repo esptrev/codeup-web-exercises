@@ -420,3 +420,11 @@ console.log(parseFloat(7.5/10));
 console.log("trevor")
 console.log([] == ![]);
 
+console.log(typeof []);
+console.log(typeof [1]);
+
+let myArr = [];
+for (let i = 0; i < 5; i++) {
+    myArr.push(i)
+}
+console.log(i);
