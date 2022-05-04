@@ -427,4 +427,12 @@ let myArr = [];
 for (let i = 0; i < 5; i++) {
     myArr.push(i)
 }
-console.log(i);
+console.log(myArr);
+
+let newArr = [];
+console.log(newArr)
+console.log([] == '');
+console.log([] == 0);
+
+let [a,b, ...e] = [1,2,3,4,5];
+console.log(e)
