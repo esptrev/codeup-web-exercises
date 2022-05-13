@@ -436,3 +436,11 @@ console.log([] == 0);
 
 let [a,b, ...e] = [1,2,3,4,5];
 console.log(e)
+
+const myPet = {
+    animal: "dog",
+    name: "Samwise"
+}
+//const {animal,name} = myPet;
+//console.log(`my ${animal} is named ${name}.`);
+console.log(myPet)
