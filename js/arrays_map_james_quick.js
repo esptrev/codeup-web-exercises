@@ -79,8 +79,21 @@ console.log( short);
 
 //***SORT***
 //1. Sort by mass
+const massAsscending = characters.sort((a,b) =>{
+    return a.mass - b.mass
+})
+console.log(massAsscending);
+const massDescending = characters.sort((a,b) =>{
+    return b.mass - a.mass;
+})
+console.log(massDescending);
 //2. Sort by height
 //3. Sort by name
+const byName = characters.sort((a,b) => {
+    if(a.name < b.name) return -1;
+    return 1;
+})
+console.log(byName);
 //4. Sort by gender
 
 //***EVERY***
