@@ -444,3 +444,27 @@ const myPet = {
 //const {animal,name} = myPet;
 //console.log(`my ${animal} is named ${name}.`);
 console.log(myPet)
+
+
+let g= 1;
+let h=3;
+[g,h] = [h,g];
+console.log(g,h);
+
+const dog = new Map();
+dog.set('name','samwise');
+dog.set('breed','maltipoo');
+
+console.log(dog.get('name'));
+
+class Friend{
+    constructor(name) {
+    this.name = name;
+    this.getName = () => this.name;
+
+    }
+}
+
+const myFriend = new Friend('Trevor')
+const {getName} = myFriend;
+console.log(getName());
